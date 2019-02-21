@@ -1,5 +1,3 @@
-# RDTK Documentation
-
 ## What is the RDTK
 
 TODO
