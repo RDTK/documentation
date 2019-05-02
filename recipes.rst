@@ -35,7 +35,7 @@ Kinds of recipes:
   depending on the overall development mode.
 
 On the syntactic level, all descriptions are currently based on
-`JSON`_.
+`YAML`_.
 
 Variables and the Substitution Sub-Language
 ===========================================
@@ -46,15 +46,12 @@ variable names and their values. In `JSON`_, this translates into
 
 .. parsed-literal::
 
-   {
-     …
+   …
 
-     "variables": {
-       :samp:`"{NAME₁}"`: :samp:`{VALUE₁}`,
-       :samp:`"{NAME₂}"`: :samp:`{VALUE₂}`,
-       …
-     }
-   }
+   variables:
+     :samp:`"{NAME₁}"`: :samp:`{VALUE₁}`
+     :samp:`"{NAME₂}"`: :samp:`{VALUE₂}`
+     …
 
 The value part of a variable definition is either a string or a list
 of values. A small substitution sub-language, syntactically similar to
@@ -64,17 +61,15 @@ substitution, which act differently on strings and lists.
 
 Some examples of variable definitions
 
-.. code-block:: js
+.. code-block:: yaml
 
-   {
-     "list.a":  [ "abc", "def" ],
-     "list.b":  [ "123", "456" ],
-     "list.c":  [ "@{list.a}", "@{list.b}", "uvw", "${text}" ],
-     "text":    "xyz",
+   list.a:  [ "abc", "def" ],
+   list.b:  [ "123", "456" ],
+   list.c:  [ "@{list.a}", "@{list.b}", "uvw", "${text}" ],
+   text":   "xyz",
 
-     "dashed":  "${list.c}-",
-     "product": "(${list.a} * ${list.b})"
-   }
+   dashed:  "${list.c}-",
+   product: "(${list.a} * ${list.b})"
 
 The basic syntax is as follows:
 
@@ -145,14 +140,14 @@ The basic syntax is as follows:
 
   Assuming the following variables are defined (repeated from above):
 
-  .. code-block:: js
+  .. code-block:: yaml
 
-     "list.a":  [ "abc", "def" ]
-     "list.b":  [ "123", "456" ]
-     "list.c":  [ "@{list.a}", "@{list.b}", "uvw", "${text}" ]
-     "text":    "xyz"
-     "dashed":  "${list.c}-"
-     "product": "(${list.a} * ${list.b})"
+     list.a:  [ "abc", "def" ]
+     list.b:  [ "123", "456" ]
+     list.c:  [ "@{list.a}", "@{list.b}", "uvw", "${text}" ]
+     text:    "xyz"
+     dashed:  "${list.c}-"
+     product: "(${list.a} * ${list.b})"
 
   , the following results would be produced::
 
