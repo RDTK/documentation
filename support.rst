@@ -28,6 +28,10 @@ IRC
   When using the IRC channel, please be patient. We will likely not
   responds within seconds or minutes but within hours.
 
+GitHub Projects
+
+Gitter
+
 Reporting Bugs
 ==============
 

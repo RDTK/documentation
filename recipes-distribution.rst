@@ -9,23 +9,18 @@ TODO introduction see project-recipe
 A basic :term:`distribution` description, which in this case would be
 stored in a file named :file:`toolkit.distribution`, looks like this:
 
-.. code-block:: json
+.. code-block:: yaml
 
-   {
-     "variables": {
+   variables:
+     …
 
-     },
+   include:
+     "distributions": [
+     ],
+     "projects":      [
+     ]
 
-     "include": {
-       "distributions": [
-
-       ],
-       "projects":      [
-
-       ]
-     },
-
-     "versions":  [
+   versions:  [
        {
          "name": "nightly",
          "include": {
@@ -85,13 +80,13 @@ The following fields are most important:
 
   Example:
 
-  .. code-block:: json
+  .. code-block:: yaml
 
-     { "match": {
-         "pattern": "^(([^-]+)-stable)$",
-         "name":    "\\1",
-         "numeric": "\\2"
-     } }
+     versions:
+     - pattern: "^(([^-]+)-stable)$"
+       variables:
+         name: "${match:1}"
+         numeric: "${match:2}"
 
 ``versions`` » ``match`` » ``pattern``
 

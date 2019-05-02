@@ -21,26 +21,29 @@ projects:
 A basic :term:`project` :term:`recipe`, which in this case would be
 stored in a file named :file:`rsb-cpp.project`, looks like this:
 
-.. code-block:: json
+.. code-block:: yaml
 
-   {
-     "templates": [ "code-cor-lab", "cmake-cpp", "base" ],
+   templates:
+   - code-cor-lab
+   - cmake-cpp
+   - base
 
-     "variables": {
-       "description":     "C++ implementation of the robotics service bus (RSB)",
-       "keywords":        [ "middleware", "integration", "robotics" ],
+   variables
+     description: >-
+       C++ implementation of the robotics service bus (RSB)
+     keywords:
+     - middleware
+     - integration
+     - robotics
 
-       "repository":      "https://code.cor-lab.org/git/rsb.git.cpp",
+     repository: "https://code.cor-lab.org/git/rsb.git.cpp
 
-       "redmine-project": "rsb",
+     redmine-project: rsb
 
-       "cmake.options":   [
-         "BUILD_TESTS=OFF",
-         "BUILD_EXAMPLES=OFF",
-         "@{next-value|[]}"
-       ]
-     }
-   }
+     cmake.options:
+     - BUILD_TESTS=OFF,
+     - BUILD_EXAMPLES=OFF,
+     - "@{next-value|[]}"
 
 The following fields are most important:
 
