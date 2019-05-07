@@ -10,15 +10,15 @@ git clone _to_be_determined .
 Calculate system dependencies
 
 <pre>
-$HOME/rdtk/jenkins/job-configurator --on-error=continue \
+$HOME/rdtk/build-generator-0.28-x86_64-linux --on-error=continue \
 --cache-directory=$HOME/rdtk/gen-cache platform-requirements \
 -p "ubuntu $(lsb_release -rs)" $HOME/rdtk/dist/distributions/DESIRED_DISTRIBUTION.distribution
 </pre>
 
-Generate build jobs
+Generate build jobs. YOUR_API_TOKEN can be found out using the Jenkins web interface.
 
 <pre>
-$HOME/rdtk/jenkins/job-configurator --on-error=continue \
+$HOME/rdtk/build-generator-0.28-x86_64-linux --on-error=continue \
 --cache-directory=$HOME/rdtk/gen-cache generate -m toolkit \
 -D toolkit.volume=$HOME/rdtk/systems -u {YOUR_USERNAME} \
 -a {YOUR_API_TOKEN} $HOME/rdtk/dist/distributions/DESIRED_DISTRIBUTION.distribution

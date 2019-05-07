@@ -7,31 +7,29 @@ sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev \
 python-setuptools git subversion maven build-essential build-essential cmake
 </pre>
 
-Download Jenkins
+Download Generator
 
 <pre>
 mkdir -p $HOME/rdtk/ && cd $HOME/rdtk/
-wget --no-check-certificate https://ci.toolkit.cit-ec.de/job/jenkins-distribution/lastStableBuild/artifact/jenkins.tar.gz \
- -O jenkins.tar.gz
+wget https://github.com/RDTK/generator/releases/download/release-0.28/build-generator-0.28-x86_64-linux
+chmod +x build-generator-0.28-x86_64-linux
 </pre>
 
-Unzip Jenkins
-
+Install Jenkins
 <pre>
-tar -xzvf jenkins.tar.gz
-cd jenkins
+./build-generator-0.28-x86_64-linux install-jenkins jenkins
 </pre>
 
-Create user and password
 
+Create user
 <pre>
-./create_user.sh
+./build-generator-0.28-x86_64-linux create-jenkins-user  --username=USER --password=PASS --email=MAIL jenkins  
 </pre>
 
 Start the Jenkins, you should be able to browse to https://localhost:8080
 
 <pre>
-./start_jenkins
+jenkins/start_jenkins
 </pre>
 
 [Back](README.md)
