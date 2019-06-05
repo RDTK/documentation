@@ -100,13 +100,13 @@ Solution
     [ "cmake", flobi_description", "0.1.0" ]
 
   steht, oder das im assoziierten Projekt
-  find_package(flobi_description 0.1.0) in einer CMakeLists.txt-Datei
-  gefunden wurde.
+  ``find_package(flobi_description 0.1.0)`` in einer
+  :file:`CMakeLists.txt`-Datei gefunden wurde.
 
   Wer dieses CMake-Paket anbieten müsste, und wie, weiß ich
   nicht. Normalerweise würde ich ein flobi_desciption-Rezept erwarten,
-  dass ein passendes extra-provides enthält, oder eine
-  flobi_description-config.cmake[.in] im assoziierten Projekt.
+  dass ein passendes ``extra-provides`` enthält, oder eine
+  :file:`flobi_description-config.cmake[.in]` im assoziierten Projekt.
 
 Checking out a specific Revision or Commit
 ==========================================
@@ -118,24 +118,17 @@ Problem
 
 Solution
 
-  .. code-block:: json
+  .. code-block:: yaml
 
-     { "versions": [
-         {
-             "name":   "test-branch-and-revision",
-             "variables": {
-                 "branch": "trunk",
-                 "commit": "13047"
-             }
-         },
-         {
-             "name":   "test-directory-and-revision",
-             "variables": {
-                 "directory": "foo/bar",
-                 "commit": "2342"
-             }
-         }
-     ] }
+     versions:
+       - name: test-branch-and-revision
+         variables:
+           branch: trunk
+           commit: '13047'
+       - name: test-directory-and-revision
+         variables:
+           directory: foo/bar
+           commit:    '2342'
 
 Inspecting Analysis Results
 ===========================

@@ -15,23 +15,12 @@ stored in a file named :file:`toolkit.distribution`, looks like this:
      …
 
    include:
-     "distributions": [
-     ],
-     "projects":      [
-     ]
+     …
 
-   versions:  [
-       {
-         "name": "nightly",
-         "include": {
-           "projects": [
-             [ "spread",  "trunk"      ],
-             [ "cbf",     "0.1", "0.2" ]
-           ]
-         }
-       }
-     ]
-   }
+   versions:
+     - project₁@version₁
+     - project₂@version₂
+     …
 
 The following fields are most important:
 
@@ -47,28 +36,23 @@ The following fields are most important:
 
   TODO
 
-``include`` » ``distributions``
+``include``
 
   TODO
 
-``include`` » ``projects``
+``versions``
 
   A list of :term:`project` names and versions with elements of the
   form
 
   .. parsed-literal::
 
-     :samp:`[ "{NAME}", "{VERSION₁}", "{VERSION₂}", … ]`
+     :samp:`{NAME}@{VERSION}`
+     :samp:`name: "{NAME}" versions: - {VERSION₁} - {VERSION₂}`
 
   which should be part the :term:`distribution`. Note that multiple
   versions of a :term:`project` can be specified in one entry but
   multiple entry for the same :term:`project` are not allowed.
-
-``versions``
-
-  A list of version specification declaring existing versions of the
-  :term:`distribution`. Like the toplevel dictionary, entries in this
-  list can contain ``variables`` and ``include``.
 
 ``versions`` » ``name``
 
@@ -87,18 +71,6 @@ The following fields are most important:
        variables:
          name: "${match:1}"
          numeric: "${match:2}"
-
-``versions`` » ``match`` » ``pattern``
-
-  TODO
-
-``versions`` » ``match`` » :samp:`{NAME}`
-
-  An entry of the form :samp:`[ "{NAME}", "{VALUE}" ]` causes the
-  variable :samp:`{NAME}` to be set to :samp:`{VALUE}`.
-  :samp:`{VALUE}` can refer to capture groups created in the regular
-  expression in ``versions`` » ``match`` » ``pattern`` via the usual
-  :samp:`\\{GROUP-ID}` syntax.
 
 ``versions`` » ``variables``
 
