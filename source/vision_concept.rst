@@ -1,7 +1,6 @@
 Vision and Concept
 ==================
 
-
 Software systems in a scientific context:
 
 - Large: Often tens to hundreds of software components
@@ -73,5 +72,3 @@ Docker Builds
     :width: 800px
     :align: center
     :alt: alternate text
-
-

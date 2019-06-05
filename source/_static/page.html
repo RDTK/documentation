@@ -1,0 +1,207 @@
+{% extends "!page.html" %}
+
+{% block body %}
+
+  {{ super() }}
+
+  {% if pagename == 'index' %}
+
+    <h2>Contents</h2>
+
+    <table class="contentstable" align="center">
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/news.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('news') }}">What's new in {{project}} {{version}}?</a>
+            <br/>
+            <span class="linkdescr">The latest updates of {{project}}</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/whatis.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('concepts') }}">What is {{project}}?</a>
+            <br/>
+            <span class="linkdescr">Get an overview of {{project}} concepts</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/install.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('install')}}">Installation</a>
+            <br/>
+            <span class="linkdescr">Install {{project}} on your platform</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/troubleshooting.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('troubleshooting')}}">Troubleshooting</a>
+            <br/>
+            <span class="linkdescr">Find solutions to common problems</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/contact.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('support') }}">Support</a>
+            <br/>
+            <span class="linkdescr">Get support for {{project}} via email, chat, etc.</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/tutorial.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('examples')}}">Examples</a>
+            <br/>
+            <span class="linkdescr">Study examples demonstrating how to use {{project}}</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/tools.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('tools') }}">Tools</a>
+            <br/>
+            <span class="linkdescr">Tools for recording, manipulation and replay of events</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/specification.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('specification') }}">Specification</a>
+            <br/>
+            <span class="linkdescr">Detailed descriptions of the protocols used by {{project}}</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/api.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('api') }}">API</a>
+            <br/>
+            <span class="linkdescr">References for the programming interface of the language implementations</span>
+          </p>
+        </td>
+        <td width="50%">
+        </td>
+      </tr>
+    </table>
+
+    <p><strong>{{ _('Indices and tables:') }}</strong></p>
+    <table class="contentstable" align="center">
+      <tr>
+        <td width="50%">
+          <p class="icon"><img src="{{ '_static/search.svg' }}"/></p>
+          <p class="biglink">
+            <a href="{{ pathto('search') }}">{{ _('Search Page') }}</a>
+            <br>
+            <span class="linkdescr">{{ _('Search this documentation') }}</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon"><img src="{{ '_static/index.svg' }}"/></p>
+          <p class="biglink">
+            <a href="{{ pathto('genindex') }}">{{ _('General Index') }}</a>
+            <br>
+            <span class="linkdescr">{{ _('All functions, classes, terms') }}</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon"><img src="{{ '_static/glossary.svg' }}"/></p>
+          <p class="biglink">
+            <a href="{{ pathto('glossary') }}">{{ _('Glossary') }}</a>
+            <br>
+            <span class="linkdescr">{{ _('Terms and definitions') }}</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon"><img src="{{ '_static/literature.svg' }}"/></p>
+          <p class="biglink">
+            <a href="{{ pathto('literature') }}">{{ _('Literature') }}</a>
+            <br>
+            <span class="linkdescr">{{ _('Relevant scientific literature') }}</span>
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <div class="admonition note">
+      <p>
+        The design of this page has been lifted from the documentation of
+        the <a href="https://www.openrobots.org/wiki/morse">MORSE</a>
+        project.
+      </p>
+    </div>
+
+  {% elif pagename == 'api' %}
+
+    <table class="contentstable" align="center">
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/python.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('api-python') }}">Python</a>
+            <br/>
+            <span class="linkdescr">API of the Python implementation</span>
+          </p>
+        </td>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/cpp.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('api-cpp') }}">C++</a>
+            <br/>
+            <span class="linkdescr">API of the C++ implementation</span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+          <p class="icon">
+            <img src="{{ '_static/java.svg' }}" alt="">
+          </p>
+          <p class="biglink">
+            <a href="{{ pathto('api/java/packages') }}">Java</a>
+            <br/>
+            <span class="linkdescr">API of the Java implementation</span>
+          </p>
+        </td>
+        <td width="50%">
+        </td>
+      </tr>
+    </table>
+
+  {% endif %}
+
+{% endblock %}
