@@ -10,7 +10,7 @@ Overview
 |Project| needs to be aware of dependencies between :term:`projects
 <project>` to be able to determine an order in which a given set of
 :term:`projects <project>` can be built. To this end, dependency in
-|Project|  manifests itself in form of the following facets:
+|Project| manifests itself in form of the following facets:
 
 #. Identification of isolated "requires" and "provides" properties of
    :term:`projects <project>`

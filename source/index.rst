@@ -19,6 +19,15 @@ Welcome to RDTK's documentation!
    writing_recipes_primer
    faq
 
+   news
+   concepts
+   recipes
+   install
+   troubleshooting
+   examples
+   tools
+   specification-language
+
 Indices and tables
 ==================
 
