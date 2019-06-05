@@ -18,10 +18,3 @@ Welcome to RDTK's documentation!
    updating
    writing_recipes_primer
    faq
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
