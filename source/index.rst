@@ -9,6 +9,7 @@ Welcome to |project|'s documentation!
    vision_concept
    bootstrapping
    deployment_specifics
+
    useful_generator_commands
    passwords_and_credentials
    updating
@@ -18,7 +19,6 @@ Welcome to |project|'s documentation!
    news
    concepts
    recipes
-   install
    troubleshooting
    examples
    tools

@@ -1,5 +1,5 @@
-Bootstrapping the RDTK
-=======================
+Bootstrapping the |project|
+===========================
 
 In general you can install the RDTK in any location. However, in order
 to establish a common ground for the tutorials we declare:
