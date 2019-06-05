@@ -6,7 +6,7 @@ Welcome to |project|'s documentation!
 .. toctree::
    :hidden:
 
-   vision_concept
+   concepts
    bootstrapping
    deployment_specifics
 
@@ -17,7 +17,7 @@ Welcome to |project|'s documentation!
    faq
 
    news
-   concepts
+
    recipes
    troubleshooting
    examples
