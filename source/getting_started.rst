@@ -1,3 +1,5 @@
+.. _getting_started:
+
 Getting Started
 ===============
 
@@ -5,8 +7,10 @@ In general, the |project| is supported on `Ubuntu Linux (16.04/18.04) <https://w
 However, running the |project| on other Linux flavors is also possible. To this end, please substitute the
 corresponding distribution dependent commands, e.g., ``apt-get install``
 
+This tutorial serves as an introduction. The resulting installation is fully usable -- however, if you
+plan to deploy a 'production' system, please also consider the reading :ref:`advanced` configuration.
 
-In order to get started, you will need to install the following dependencies to run |project| tools.
+Now, in order to get started, you will need to install the following dependencies to run |project| tools.
 Open a terminal and run:
 
 .. code-block:: bash
@@ -25,19 +29,20 @@ Also, please note if you open new shells/terminals in this tutorial, remember to
 ``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``
 to your ``$HOME/.bashrc``.
 
-Install Jenkins
----------------
+Installing Jenkins
+------------------
 
 First you need to download the build-generator from https://github.com/RDTK/generator/releases/latest
+Change-dir to the download folder of the build-generator binary (replace VERSION) ...
+
 
 .. code-block:: bash
 
-   # Change dir to the download folder of the build-generator, replace VERSION
    chmod u+x build-generator-VERSION-x86_64-linux
-   cp build-generator-VERSION-x86_64-linux $RDTK_ROOT
+   mv build-generator-VERSION-x86_64-linux $RDTK_ROOT
    cd $RDTK_ROOT
    ln -s build-generator-VERSION-x86_64-linux build-generator
-   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
+   # Change USER_NAME_CHANGE_ME & PW_CHANGE_ME & name@foo.com (email)
    ./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p \
    PW_CHANGE_ME -e name@foo.com install-test
    # This might take between 60 and 300 seconds
@@ -52,7 +57,7 @@ Clone Recipes
 -------------
 
 To get the recipes and distributions included in the |project|, please execute the following
-code block.
+code block in a terminal.
 
 .. code-block:: bash
 
