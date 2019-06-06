@@ -38,23 +38,11 @@ First you need to download the build-generator from https://github.com/RDTK/gene
    cd $RDTK_ROOT
    ln -s build-generator-VERSION-x86_64-linux build-generator
    # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
-   ./build-generator install-jenkins --profile local-docker \
-   -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME -e name@foo.com install-test
+   ./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p \
+   PW_CHANGE_ME -e name@foo.com install-test
    # This might take between 60 and 300 seconds
    cd install-test
    ./start_jenkins
-
-
-.. code-block:: bash
-
-   cd $RDTK_ROOT
-   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
-   ./build-generator install-jenkins --profile local-docker \
-   -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME -e name@foo.com install-test
-   # This might take between 60 and 300 seconds
-   cd install-test
-   ./start_jenkins
-
 
 Now open your browser and visit: https://localhost:8080 use ```USER_NAME_CHANGE_ME`` and password
 ``PW_CHANGE_ME`` to login. You can find the login dialog in the top right corner.
@@ -73,7 +61,7 @@ code block.
 
 
 Generate Distribution Jobs
----------------------------
+--------------------------
 
 Next, to generate Build Jobs on your freshly installed Jenkins CI Server, you need to provide a
 distribution file. You can 'find' distributions in:
