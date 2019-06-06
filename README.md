@@ -6,7 +6,8 @@ Available at: TODO
 
 <pre>
   pip install -U sphinx --user
+  pip install sphinx_rtd_theme --user
   git clone https://github.com/RDTK/documentation.git
   cd documentation
-  make
+  make html
 </pre>
