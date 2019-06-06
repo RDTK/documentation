@@ -44,7 +44,7 @@ Simplified Meta Model
 
 
 Build Generator Process
-------------------------
+-----------------------
 
 .. image:: https://github.com/RDTK/dissemination/raw/master/presentations/2019-generator-jenkins-install-docker-slaves/figures/build-generator-process.png
     :width: 800px
@@ -53,7 +53,7 @@ Build Generator Process
 
 
 Bootstrapping Process
-----------------------
+---------------------
 
 .. image:: https://github.com/RDTK/dissemination/raw/master/presentations/2019-generator-jenkins-install-docker-slaves/figures/bootstrapping.png
     :width: 800px
@@ -62,7 +62,7 @@ Bootstrapping Process
 
 
 Docker Builds
---------------
+-------------
 
 .. image:: https://github.com/RDTK/dissemination/raw/master/presentations/2019-generator-jenkins-install-docker-slaves/figures/docker-process-ci-initial-setup.png
     :width: 800px

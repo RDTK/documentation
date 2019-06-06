@@ -1,5 +1,5 @@
-Updating the RDTK Tools
-========================
+Updating the |project| Tools
+============================
 
 - Update Jenkins, Update generator
 

@@ -28,6 +28,25 @@ version = u''
 # The full version, including alpha/beta/rc tags
 release = u''
 
+rst_prolog = """
+.. |project| replace::
+   {project}
+
+.. _github organization: https://github.com/rdtk
+
+.. _issue tracker: https://github.com/rdtk/generator/issues
+.. _new issue: https://github.com/rdtk/generator/issues/new
+
+.. _jenkins: https://jenkins.io
+
+.. _asdf: https://common-lisp.net/project/asdf/
+
+.. _cmake: https://cmake.org/
+
+.. _maven: https://maven.apache.org/
+
+.. _ros: https://www.ros.org/
+""".format(project = project)
 
 # -- General configuration ---------------------------------------------------
 
@@ -41,9 +60,7 @@ release = u''
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    'sphinx.ext.imgmath',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
+    'sphinx.ext.ifconfig'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -79,19 +96,13 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
-
-# This seems to be broken (flier)
-html_theme_options = {
-    'github_user': 'RDTK',
-    'github_repo': 'documentation',
-}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -35,11 +35,22 @@ Users can choose different deploy modes in ``RDTK``:
     TODO
 
 Private Repository
------------------------
+------------------
 
-In cases where access to a repository is restricted, :program:`build-generator` needs to know some login credentials. 
+.. note::
 
-If you are using GitHub for example, you can generate an `access token <https://github.com/settings/tokens>`_ with read-only access to your repository by ticking ``repo -> public_repo`` and then use this token as password along with your GitHub login name.
+    The best way to access private git repositories is accessing them with ssh keys. To enable ssh access for git repositories the project URL scheme has to be 'git+ssh'
+
+    Example for github projects: git+ssh://github.com/USER/PROJECT.git
+
+Password based access
+~~~~~~~~~~~~~~~~~~~~~
+
+In cases where access to a repository only possible with password restricted access, :program:`build-generator` and Jenkins need to know the login credentials. 
+
+.. note::
+
+    If you are using GitHub for example, you can generate an `access token <https://github.com/settings/tokens>`_ with read-only access to your repository by ticking ``repo -> public_repo`` and then use this token as password along with your GitHub login name.
 
 :program:`build-generator` requires you to store your credentials **unecrypted** in a file called ``~/.netrc``, using the following syntax for every remote machine your distribution is referencing:
 
@@ -49,9 +60,20 @@ If you are using GitHub for example, you can generate an `access token <https://
         login your_user_name
         password secret_api_token_OR_plain_password
 
-TODO Subversion
+Jenkins credentials store
+.........................
 
-TODO Jenkins credentials store
+After generating a distribution with private access projects, :program:`build-generator` shows the required credentials:
+
+.. code-block:: perl
+
+    The following credentials have been referenced and have to be configured in Jenkins' credential store:
+    * "<credential_ID>" for jobs ...
+    * "<credential_ID>" for job ...
+
+The given <credential_IDs> need to be added to the jenkins credential store jenkins_credentials_.
+
+.. _jenkins_credentials: https://jenkins.io/doc/book/using/using-credentials/
 
 Speed up generator analyze (Caching)
 ------------------------------------
