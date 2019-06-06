@@ -20,6 +20,7 @@ to establish a common configuration for the tutorials we declare:
 .. code-block:: bash
 
    export RDTK_ROOT=$HOME/RDTK
+   mkdir -p $RDTK_ROOT && cd $RDTK_ROOT
 
 Also, please note if you open new shells/terminals in this tutorial, remember to export
 ``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``
@@ -28,24 +29,35 @@ to your ``$HOME/.bashrc``.
 Install Jenkins
 ---------------
 
-First you need to download the build-generator from https://github.com/RDTK/generator/releases/latest
+First you need to download the build-generator from https://github.com/RDTK/generator/releases/latest or via console:
 
 .. code-block:: bash
 
-   # Change dir to the download folder of the build-generator, replace VERSION
-   chmod u+x build-generator-VERSION-x86_64-linux
-   cp build-generator-VERSION-x86_64-linux $RDTK_ROOT
-   cd $RDTK_ROOT
-   ln -s build-generator-VERSION-x86_64-linux build-generator
-   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
-   ./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p \
-   PW_CHANGE_ME -e name@foo.com install-test
-   # This might take between 60 and 300 seconds
-   cd install-test
-   ./start_jenkins
+  # Replace with newest verion from https://github.com/RDTK/generator/releases/latest
+  export latest=0.29
+  wget https://github.com/RDTK/generator/releases/download/release-$latest/build-generator-$latest-x86_64-linux
 
-Now open your browser and visit: https://localhost:8080 use ```USER_NAME_CHANGE_ME`` and password
-``PW_CHANGE_ME`` to login. You can find the login dialog in the top right corner.
+.. code-block:: bash
+
+  # Change dir to the download folder of the build-generator
+  mv build-generator-$latest-x86_64-linux $RDTK_ROOT
+  cd $RDTK_ROOT
+  ln -s build-generator-$latest-x86_64-linux build-generator
+  chmod u+x build-generator
+
+Install and start Jenkins:
+
+.. code-block:: bash
+
+  # Set yout own USERNAME and PASSWORD and EMAIL
+  export JENKINS_USER=USERNAME
+  export JENKINS_MAIL=EMAIL@foo.com
+  export JENKINS_PASS=PASSWORD
+  ./build-generator install-jenkins -u $JENKINS_USER -p $JENKINS_PASS -e $JENKINS_MAIL jenkins
+  # This might take between 60 and 300 seconds
+  jenkins/start_jenkins
+
+Now open your browser and visit: https://localhost:8080 use username and password to login. You can find the login dialog in the top right corner.
 
 
 Clone Recipes
@@ -68,8 +80,7 @@ distribution file. You can 'find' distributions in:
 
 .. code-block:: bash
 
-   cd $RDTK_ROOT
-   cd citk/distributions
+   cd $RDTK_ROOT/citk/distributions
    ls
 
 
@@ -77,8 +88,7 @@ Projects incorporated in a distribution can be found in:
 
 .. code-block:: bash
 
-   cd $RDTK_ROOT
-   cd citk/projects
+   cd $RDTK_ROOT/citk/projects
    ls
 
 As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
@@ -87,10 +97,14 @@ As an example we will generate all build jobs for the ``build-generator-nightly.
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   ./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME \
+   ./build-generator generate -u $JENKINS_USER -p $JENKINS_PASS \
    -D 'view.create?=true' -D view.name='Bootstrapping Tutorial' \
    citk/distributions/build-generator-nightly.distribution
 
+.. note::
+
+  You can use an jenkins api token (-a YOUR_API_TOKEN) insteat of the password.
+  YOUR_API_TOKEN can be found out using the Jenkins web interface.
 
 If you reload https://localhost:8080 you should see newly generated jobs.
 In order to build and deploy your distribution find a job named **-orchestrate** and
