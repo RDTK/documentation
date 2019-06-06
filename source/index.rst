@@ -11,8 +11,8 @@ Welcome to RDTK's documentation!
    :caption: Contents:
 
    vision_concept
-   bootstrapping
-   deployment_specifics
+   getting_started
+   advanced
    useful_generator_commands
    passwords_and_credentials
    updating
