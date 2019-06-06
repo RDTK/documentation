@@ -36,6 +36,16 @@ rst_prolog = """
 
 .. _issue tracker: https://github.com/rdtk/generator/issues
 .. _new issue: https://github.com/rdtk/generator/issues/new
+
+.. _jenkins: https://jenkins.io
+
+.. _asdf: https://common-lisp.net/project/asdf/
+
+.. _cmake: https://cmake.org/
+
+.. _maven: https://maven.apache.org/
+
+.. _ros: https://www.ros.org/
 """.format(project = project)
 
 # -- General configuration ---------------------------------------------------
