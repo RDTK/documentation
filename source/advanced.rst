@@ -53,5 +53,26 @@ TODO Subversion
 
 TODO Jenkins credentials store
 
+Speed up generator analyze (Caching)
+------------------------------------
+
+:program:`build-generator` is using ``git ls-remote`` a lot. When generating often, this process can take up much time. It is then recommended to enable caching, try :option:`cache-directory` and  :option:`cache-age-limit`.
 
 
+Generate Catalog Representation
+-------------------------------
+
+``RDTK`` includes a human readable representation of data generated from recipes and source code. 
+You can use :program:`build-generator` to emit these catalog-like pages:
+
+.. code-block:: bash
+
+    export OUTPUT_DIR="$HOME/catalog"
+    export DISTRIBUTION="$RDTK_ROOT/citk/distribution/example-*.distribution"
+    build-generator report -k catalog -o "$OUTPUT_DIR" "$DISTRIBUTION"
+
+Then use your browser to open the ``.xml`` files
+
+.. code-block:: bash
+
+    xdg-open "$OUTPUT_DIR/distribution/*.xml"
