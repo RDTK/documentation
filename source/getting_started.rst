@@ -1,12 +1,12 @@
 Getting Started
 ===============
 
-In general, the RDTK is supported on `Ubuntu Linux (16.04/18.04) <https://www.ubuntu.com/download>`_.
-However, running the RDTK on other Linux flavors is also possible. To this end, please substitute the
+In general, the |project| is supported on `Ubuntu Linux (16.04/18.04) <https://www.ubuntu.com/download>`_.
+However, running the |project| on other Linux flavors is also possible. To this end, please substitute the
 corresponding distribution dependent commands, e.g., *apt-get install*
 
 
-In order to get started, you will need to install the following dependencies in order to run RDTK tools.
+In order to get started, you will need to install the following dependencies in order to run |project| tools.
 Open a terminal and run:
 
 .. code-block:: bash

@@ -28,6 +28,15 @@ version = u''
 # The full version, including alpha/beta/rc tags
 release = u''
 
+rst_prolog = """
+.. |project| replace::
+   {project}
+
+.. _github organization: https://github.com/rdtk
+
+.. _issue tracker: https://github.com/rdtk/generator/issues
+.. _new issue: https://github.com/rdtk/generator/issues/new
+""".format(project = project)
 
 # -- General configuration ---------------------------------------------------
 
