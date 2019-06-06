@@ -1,0 +1,20 @@
+language: python
+
+python:
+  - 3.6
+
+install:
+  - pip install git+https://github.com/sphinx-doc/sphinx.git@1.8 sphinx_rtd_theme
+
+script:
+  - sphinx-build -b html -a source build
+  - touch build/.nojekyll
+
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   keep-history: false
+#   local-dir: build
+#   on:
+#     branch: master
