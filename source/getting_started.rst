@@ -56,14 +56,14 @@ First you need to download the build-generator from https://github.com/RDTK/gene
    ./start_jenkins
 
 
-Now open your browser and visit: https://localhost:8080 use *USER_NAME_CHANGE_ME* and password
-*PW_CHANGE_ME* to login. You can find the login dialog in the top right corner.
+Now open your browser and visit: https://localhost:8080 use ```USER_NAME_CHANGE_ME`` and password
+``PW_CHANGE_ME`` to login. You can find the login dialog in the top right corner.
 
 
 Clone Recipes
 -------------
 
-To get the recipes and distributions included in the RDTK, please execute the following
+To get the recipes and distributions included in the |project|, please execute the following
 code block.
 
 .. code-block:: bash
@@ -93,7 +93,7 @@ Projects incorporated in a distribution can be found in:
    cd citk/projects
    ls
 
-As an example we will generate all build jobs for the **build-generator-nightly.distribution**
+As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
 `(source file) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_.
 
 .. code-block:: bash
@@ -106,7 +106,7 @@ As an example we will generate all build jobs for the **build-generator-nightly.
 
 If you reload https://localhost:8080 you should see newly generated jobs.
 In order to build and deploy your distribution find a job named **-orchestrate** and
-trigger it using the stopwatch icon. **NOTE:*** distributions define an *install prefix*
+trigger it using the stopwatch icon. **NOTE:** distributions define an *install prefix*
 as follows
 
 .. code-block:: bash
@@ -115,4 +115,4 @@ as follows
   toolkit.dir: ${toolkit.volume}/${distribution-name}
 
 In the scope of this tutorial you can find the result of the build in
-in **/tmp/build-generator-nightly**
+in ``/tmp/build-generator-nightly``
