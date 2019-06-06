@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'RDTK'
-copyright = u'2019, Florian Lier, Jan Moringen, Martin Strob'
-author = u'Florian Lier, Jan Moringen, Martin Strob'
+copyright = u'2019, Florian Lier, Jan Moringen, Martin Strob, Leroy Ruegemer'
+author = u'Florian Lier, Jan Moringen, Martin Strob, Leroy Ruegemer'
 
 # The short X.Y version
 version = u''
@@ -98,6 +98,8 @@ pygments_style = None
 #
 html_theme = 'sphinx_rtd_theme'
 
+html_favicon = '_static/dummy-1.jpg'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -151,7 +153,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'RDTK.tex', u'RDTK Documentation',
-     u'Florian Lier, Jan Moringen, Martin Strob', 'manual'),
+     u'Florian Lier, Jan Moringen, Martin Strob, Leroy Ruegemer', 'manual'),
 ]
 
 
