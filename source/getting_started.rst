@@ -29,10 +29,6 @@ Install Jenkins
 
 .. code-block:: bash
 
-   export RDTK_ROOT=$HOME/RDTK
-   mkdir -p $RDTK_ROOT
-   # Get generator binary from https://github.com/rdtk/generator/release
-   # and copy the binary to $RDTK_ROOT
    cd $RDTK_ROOT
    # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME
    ./build-generator install-jenkins --profile local-docker \
