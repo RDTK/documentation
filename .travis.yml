@@ -4,7 +4,7 @@ python:
   - 3.6
 
 install:
-  - pip install git+https://github.com/sphinx-doc/sphinx.git@1.8 sphinx_rtd_theme
+  - pip install git+https://github.com/sphinx-doc/sphinx.git@2.0 sphinx_rtd_theme
 
 script:
   - sphinx-build -b html -a source build
