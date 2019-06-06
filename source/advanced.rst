@@ -98,3 +98,7 @@ Then use your browser to open the ``.xml`` files
 .. code-block:: bash
 
     xdg-open "$OUTPUT_DIR/distribution/*.xml"
+
+Include Distributions
+---------------------
+

@@ -10,7 +10,6 @@ Welcome to |project|'s documentation!
    getting_started
    advanced
    useful_generator_commands
-   passwords_and_credentials
    updating
    writing_recipes_primer
    faq
