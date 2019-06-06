@@ -3,10 +3,10 @@ Getting Started
 
 In general, the |project| is supported on `Ubuntu Linux (16.04/18.04) <https://www.ubuntu.com/download>`_.
 However, running the |project| on other Linux flavors is also possible. To this end, please substitute the
-corresponding distribution dependent commands, e.g., *apt-get install*
+corresponding distribution dependent commands, e.g., ``apt-get install``
 
 
-In order to get started, you will need to install the following dependencies in order to run |project| tools.
+In order to get started, you will need to install the following dependencies to run |project| tools.
 Open a terminal and run:
 
 .. code-block:: bash
@@ -15,24 +15,42 @@ Open a terminal and run:
     python-setuptools git subversion maven build-essential cmake
 
 In general, you can install the RDTK in any location (prefix). However, in order
-to establish a common ground for the tutorials we declare:
+to establish a common configuration for the tutorials we declare:
 
 .. code-block:: bash
 
    export RDTK_ROOT=$HOME/RDTK
 
-**Please note:** If you choose another prefix, remember to change it in the subsequent steps
-of this tutorial.
+Also, please note if you open new shells/terminals in this tutorial, remember to export
+``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``
+to your ``$HOME/.bashrc``.
 
 Install Jenkins
 ---------------
 
+First you need to download the build-generator from https://github.com/RDTK/generator/releases/latest
+
+.. code-block:: bash
+
+   # Change dir to the download folder of the build-generator, replace VERSION
+   chmod u+x build-generator-VERSION-x86_64-linux
+   cp build-generator-VERSION-x86_64-linux $RDTK_ROOT
+   cd $RDTK_ROOT
+   ln -s build-generator-VERSION-x86_64-linux build-generator
+   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
+   ./build-generator install-jenkins --profile local-docker \
+   -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME -e name@foo.com install-test
+   # This might take between 60 and 300 seconds
+   cd install-test
+   ./start_jenkins
+
+
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME
+   # Replace USER_NAME_CHANGE_ME and PW_CHANGE_ME and name@foo.com (email)
    ./build-generator install-jenkins --profile local-docker \
-   -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME -e a@b.c install-test
+   -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME -e name@foo.com install-test
    # This might take between 60 and 300 seconds
    cd install-test
    ./start_jenkins
@@ -45,7 +63,7 @@ Now open your browser and visit: https://localhost:8080 use *USER_NAME_CHANGE_ME
 Clone Recipes
 -------------
 
-In order to get the recipes and distributions included in the RDTK, please execute the following
+To get the recipes and distributions included in the RDTK, please execute the following
 code block.
 
 .. code-block:: bash
@@ -81,7 +99,7 @@ As an example we will generate all build jobs for the **build-generator-nightly.
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   ./build-generator generate -u USER_NAME -p TEST \
+   ./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME \
    -D 'view.create?=true' -D view.name='Bootstrapping Tutorial' \
    citk/distributions/build-generator-nightly.distribution
 
