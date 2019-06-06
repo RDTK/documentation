@@ -94,13 +94,30 @@ You can use :program:`build-generator` to emit these catalog-like pages:
 
     export OUTPUT_DIR="$HOME/catalog"
     export DISTRIBUTION="$RDTK_ROOT/citk/distribution/example-*.distribution"
-    build-generator report -k catalog -o "$OUTPUT_DIR" "$DISTRIBUTION"
+    $RDTK_ROOT/build-generator report -k catalog -o "$OUTPUT_DIR" "$DISTRIBUTION"
 
-Then use your browser to open the ``.xml`` files:
+Install the catalog server:
 
 .. code-block:: bash
 
-    xdg-open "$OUTPUT_DIR/distribution/*.xml"
+    git clone https://github.com/RDTK/CITKat.git; cd CITKat
+    ./setup install --user
+
+Run the catalog server:
+
+.. code-block:: bash
+
+    export PATH=$HOME/.local/bin:$PATH
+    cd "$OUTPUT_DIR"
+    citkat
+
+Point your browser to http://localhost:5000/.
+
+.. Then use your browser to open the ``.xml`` files:
+
+.. .. code-block:: bash
+
+..     xdg-open "$OUTPUT_DIR/distribution/*.xml"
 
 Include Distributions
 ---------------------
