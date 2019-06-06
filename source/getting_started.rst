@@ -82,7 +82,7 @@ Projects incorporated in a distribution can be found in:
    ls
 
 As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
-`(source file) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_.
+`(source) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_.
 
 .. code-block:: bash
 
