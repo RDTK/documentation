@@ -9,7 +9,6 @@ Welcome to |project|'s documentation!
    vision_concept
    getting_started
    advanced
-   useful_generator_commands
    updating
    writing_recipes_primer
    faq
