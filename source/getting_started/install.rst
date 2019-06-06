@@ -59,8 +59,8 @@ code block in a terminal.
    git clone https://opensource.cit-ec.de/git/citk
 
 
-Generate Distribution Jobs
---------------------------
+Generate Distribution Jobs and Dependency Installation
+------------------------------------------------------
 
 Next, to generate Build Jobs on your freshly installed Jenkins CI Server, you need to provide a
 distribution file. You can 'find' distributions in:
@@ -79,7 +79,24 @@ Projects incorporated in a distribution can be found in:
    ls
 
 As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
-`(source) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_.
+`(source) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_ and the required platform dependencies.
+
+.. code-block:: bash
+
+   cd $RDTK_ROOT
+   ./build-generator platform-requirements --platform ubuntu \ 
+   citk/distributions/build-generator-nightly.distribution
+   # Exemplary generator output:
+   # Found 12 platform requirements for ubuntu:
+   # curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev
+
+The printed platform dependencies must be installed system-wide, which results for the running examples in the following command line:
+
+.. code-block:: bash
+
+   sudo apt-get install curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev
+
+Subsequently, the build jobs for the distribution can be generated and deployed to Jenkins:
 
 .. code-block:: bash
 
