@@ -49,25 +49,8 @@ Change-dir to the download folder of the build-generator binary (replace VERSION
    cd install-test
    ./start_jenkins
 
-  # Change dir to the download folder of the build-generator
-  mv build-generator-$latest-x86_64-linux $RDTK_ROOT
-  cd $RDTK_ROOT
-  ln -s build-generator-$latest-x86_64-linux build-generator
-  chmod u+x build-generator
-
-Install and start Jenkins:
-
-.. code-block:: bash
-
-  # Set yout own USERNAME and PASSWORD and EMAIL
-  export JENKINS_USER=USERNAME
-  export JENKINS_MAIL=EMAIL@foo.com
-  export JENKINS_PASS=PASSWORD
-  ./build-generator install-jenkins -u $JENKINS_USER -p $JENKINS_PASS -e $JENKINS_MAIL jenkins
-  # This might take between 60 and 300 seconds
-  jenkins/start_jenkins
-
-Now open your browser and visit: https://localhost:8080 use username and password to login. You can find the login dialog in the top right corner.
+Now open your browser and visit: https://localhost:8080 use username and password to login.
+You can find the login dialog in the top right corner.
 
 
 Clone Recipes
@@ -90,8 +73,7 @@ distribution file. You can 'find' distributions in:
 
 .. code-block:: bash
 
-   cd $RDTK_ROOT
-   cd citk/distributions
+   cd $RDTK_ROOT/citk/distributions
    ls
 
 
@@ -99,8 +81,7 @@ Projects incorporated in a distribution can be found in:
 
 .. code-block:: bash
 
-   cd $RDTK_ROOT
-   cd citk/projects
+   cd $RDTK_ROOT/citk/projects
    ls
 
 As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
