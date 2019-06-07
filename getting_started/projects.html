@@ -15,46 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="RDTK  documentation" href="../index.html"/>
-        <link rel="up" title="Getting Started" href="../getting_started.html"/>
-        <link rel="next" title="Advanced" href="../advanced.html"/>
-        <link rel="prev" title="Modify Distribution" href="modify.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced" href="../advanced.html" />
+    <link rel="prev" title="Modify Distribution" href="modify.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -85,7 +80,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../vision_concept.html">Vision and Concept</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
@@ -117,36 +115,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">RDTK</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RDTK</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../getting_started.html">Getting Started</a> &raquo;</li>
-      
-    <li>Creating Projects</li>
+        
+      <li>Creating Projects</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/getting_started/projects.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -159,14 +177,14 @@
 <div class="section" id="creating-a-project">
 <h2>Creating a Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h2>
 <p>Create the project under citk/projects with the following content:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">templates</span><span class="p p-Indicator">:</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">templates</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;BUILDTYPE&gt;</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">base</span>
 
-<span class="l l-Scalar l-Scalar-Plain">variables</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">repository</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;URL&gt;</span>
+<span class="nt">variables</span><span class="p">:</span>
+  <span class="nt">repository</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;URL&gt;</span>
 
-<span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
+<span class="nt">branches</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
 </pre></div>
 </div>
@@ -185,9 +203,9 @@
 <p>For Maven projects add the <code class="docutils literal notranslate"><span class="pre">maven</span></code> Template.</p>
 <p>This will run mvn install deploy and dependency:copy-dependencies targets.</p>
 <p>Additional targets can be added with the <code class="docutils literal notranslate"><span class="pre">maven.targets</span></code> variable:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">variables</span><span class="p p-Indicator">:</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span>
 
-  <span class="l l-Scalar l-Scalar-Plain">maven.targets</span><span class="p p-Indicator">:</span>
+  <span class="nt">maven.targets</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bar</span>
 </pre></div>
@@ -209,16 +227,16 @@
 <div class="section" id="adding-a-github-project">
 <h2>Adding a Github Project<a class="headerlink" href="#adding-a-github-project" title="Permalink to this headline">¶</a></h2>
 <p>Create the project under citk/projects with the following content, replacing &lt;user&gt; and &lt;project&gt; with the organization and project names:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">templates</span><span class="p p-Indicator">:</span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">templates</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;BUILDTYPE&gt;</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">base</span>
 
-<span class="l l-Scalar l-Scalar-Plain">variables</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">github.user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;user&gt;</span>
-  <span class="l l-Scalar l-Scalar-Plain">github.project</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;project&gt;</span>
+<span class="nt">variables</span><span class="p">:</span>
+  <span class="nt">github.user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;user&gt;</span>
+  <span class="nt">github.project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;project&gt;</span>
 
-<span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
+<span class="nt">branches</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
 </pre></div>
 </div>
@@ -231,6 +249,7 @@
 
 
            </div>
+           
           </div>
           <footer>
     <div role="contentinfo">
@@ -266,35 +285,15 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
  <script type="text/javascript">
     $(document).ready(function() {

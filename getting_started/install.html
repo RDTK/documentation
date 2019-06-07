@@ -15,46 +15,41 @@
   
     <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="RDTK  documentation" href="../index.html"/>
-        <link rel="up" title="Getting Started" href="../getting_started.html"/>
-        <link rel="next" title="Modify Distribution" href="modify.html"/>
-        <link rel="prev" title="Getting Started" href="../getting_started.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modify Distribution" href="modify.html" />
+    <link rel="prev" title="Getting Started" href="../getting_started.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -85,7 +80,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../vision_concept.html">Vision and Concept</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Install</a><ul>
@@ -115,36 +113,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">RDTK</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RDTK</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../getting_started.html">Getting Started</a> &raquo;</li>
-      
-    <li>Install</li>
+        
+      <li>Install</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/getting_started/install.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -169,11 +187,13 @@ to establish a common configuration for the tutorials we declare:</p>
 </div>
 <p>Also, please note if you open new shells/terminals in this tutorial, remember to export
 <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">RDTK_ROOT=$HOME/RDTK</span></code> in the new shell. Alternatively, add <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">RDTK_ROOT=$HOME/RDTK</span></code>
-to your <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code>.</p>
+to your <code class="file docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code>.</p>
 <div class="section" id="installing-jenkins">
 <h2>Installing Jenkins<a class="headerlink" href="#installing-jenkins" title="Permalink to this headline">¶</a></h2>
-<p>First you need to download the build-generator from <a class="reference external" href="https://github.com/RDTK/generator/releases/latest">https://github.com/RDTK/generator/releases/latest</a>
-Change-dir to the download folder of the build-generator binary (replace VERSION) …</p>
+<p>First you need to download the <strong class="program">build-generator</strong> from
+<a class="reference external" href="https://github.com/RDTK/generator/releases/latest">https://github.com/RDTK/generator/releases/latest</a>. Change-dir to the
+download folder of the <strong class="program">build-generator</strong> binary (replace
+<code class="samp docutils literal notranslate"><em><span class="pre">VERSION</span></em></code>) …</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod u+x build-generator-VERSION-x86_64-linux
 mv build-generator-VERSION-x86_64-linux <span class="nv">$RDTK_ROOT</span>
 <span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
@@ -191,8 +211,8 @@ You can find the login dialog in the top right corner.</p>
 </div>
 <div class="section" id="clone-recipes">
 <h2>Clone Recipes<a class="headerlink" href="#clone-recipes" title="Permalink to this headline">¶</a></h2>
-<p>To get the recipes and distributions included in the RDTK, please execute the following
-code block in a terminal.</p>
+<p>To get the <a class="reference internal" href="../glossary.html#term-recipe"><span class="xref std std-term">recipes</span></a> and <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> included in the RDTK, please execute the
+following code block in a terminal.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
 git clone https://opensource.cit-ec.de/git/citk
 </pre></div>
@@ -200,13 +220,15 @@ git clone https://opensource.cit-ec.de/git/citk
 </div>
 <div class="section" id="generate-distribution-jobs-and-dependency-installation">
 <h2>Generate Distribution Jobs and Dependency Installation<a class="headerlink" href="#generate-distribution-jobs-and-dependency-installation" title="Permalink to this headline">¶</a></h2>
-<p>Next, to generate Build Jobs on your freshly installed Jenkins CI Server, you need to provide a
-distribution file. You can ‘find’ distributions in:</p>
+<p>Next, to generate Build Jobs on your freshly installed <a class="reference external" href="https://jenkins.io">Jenkins</a> CI
+Server, you need to provide a <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a> file. You can
+‘find’ distributions in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>/citk/distributions
 ls
 </pre></div>
 </div>
-<p>Projects incorporated in a distribution can be found in:</p>
+<p><a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">Projects</span></a> incorporated in a distribution can be found
+in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>/citk/projects
 ls
 </pre></div>
@@ -225,23 +247,29 @@ citk/distributions/build-generator-nightly.distribution
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install curl file gcc git libssl1.0.0 make sbcl tar <span class="nb">time</span> unp unzip zlib1g-dev
 </pre></div>
 </div>
-<p>Subsequently, the build jobs for the distribution can be generated and deployed to Jenkins:</p>
+<p>Subsequently, the build jobs for the <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a> can be
+generated and deployed to <a class="reference external" href="https://jenkins.io">Jenkins</a>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
 ./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME <span class="se">\</span>
 -D <span class="s1">&#39;view.create?=true&#39;</span> -D view.name<span class="o">=</span><span class="s1">&#39;Bootstrapping Tutorial&#39;</span> <span class="se">\</span>
 citk/distributions/build-generator-nightly.distribution
 </pre></div>
 </div>
-<p>If you reload <a class="reference external" href="https://localhost:8080">https://localhost:8080</a> you should see newly generated jobs.
-In order to build and deploy your distribution find a job named <strong>-orchestrate</strong> and
-trigger it using the stopwatch icon. <strong>NOTE:</strong> distributions define an <em>install prefix</em>
-as follows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>toolkit.volume: /tmp/
-toolkit.dir: <span class="si">${</span><span class="nv">toolkit</span><span class="p">.volume</span><span class="si">}</span>/<span class="si">${</span><span class="nv">distribution</span><span class="p">-name</span><span class="si">}</span>
+<p>If you reload <a class="reference external" href="https://localhost:8080">https://localhost:8080</a> you should see newly generated
+jobs.  In order to build and deploy your <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a> find a
+job named <strong>-orchestrate</strong> and trigger it using the stopwatch
+icon.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">Distributions</span></a> define an <em>install prefix</em> as
+follows:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">toolkit.volume</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/tmp/</span>
+<span class="nt">toolkit.dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${toolkit.volume}/${distribution-name}</span>
 </pre></div>
 </div>
-<p>In the scope of this tutorial you can find the result of the build in
-in <code class="docutils literal notranslate"><span class="pre">/tmp/build-generator-nightly</span></code></p>
+<p class="last">In the scope of this tutorial you can find the result of the build in
+in <code class="file docutils literal notranslate"><span class="pre">/tmp/build-generator-nightly</span></code>.</p>
+</div>
 </div>
 </div>
 
@@ -251,6 +279,7 @@ in <code class="docutils literal notranslate"><span class="pre">/tmp/build-gener
 
 
            </div>
+           
           </div>
           <footer>
     <div role="contentinfo">
@@ -286,35 +315,15 @@ in <code class="docutils literal notranslate"><span class="pre">/tmp/build-gener
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
  <script type="text/javascript">
     $(document).ready(function() {
