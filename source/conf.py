@@ -37,6 +37,8 @@ rst_prolog = """
 .. _issue tracker: https://github.com/rdtk/generator/issues
 .. _new issue: https://github.com/rdtk/generator/issues/new
 
+.. _citec: https://www.cit-ec.de/en
+
 .. _jenkins: https://jenkins.io
 
 .. _asdf: https://common-lisp.net/project/asdf/
