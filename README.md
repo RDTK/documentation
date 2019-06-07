@@ -2,7 +2,9 @@
 
 Available at: TODO
 
-## Manual Build
+## Manual 
+
+### Build
 
 <pre>
   pip install -U sphinx --user
@@ -10,4 +12,11 @@ Available at: TODO
   git clone https://github.com/RDTK/documentation.git
   cd documentation
   make html
+</pre>
+
+### Delpoy
+
+From master branch run:
+<pre>
+  make gh-pages
 </pre>

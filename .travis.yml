@@ -17,4 +17,4 @@ script:
 #   keep-history: false
 #   local-dir: build
 #   on:
-#     branch: master
+#     branch: gh-pages
