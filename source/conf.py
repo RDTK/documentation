@@ -37,6 +37,8 @@ rst_prolog = """
 .. _issue tracker: https://github.com/rdtk/generator/issues
 .. _new issue: https://github.com/rdtk/generator/issues/new
 
+.. _gitter chat: https://gitter.im/RDTK/community
+
 .. _citec: https://www.cit-ec.de/en
 
 .. _jenkins: https://jenkins.io
