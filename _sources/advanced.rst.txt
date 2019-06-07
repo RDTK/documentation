@@ -118,6 +118,8 @@ Run the catalog server:
 
 Point your browser to http://localhost:5000/.
 
+If you'd like to learn how to set up a production environment, have a look at the `README <https://github.com/RDTK/CITKat#readme>`_.
+
 .. Then use your browser to open the ``.xml`` files:
 
 .. .. code-block:: bash

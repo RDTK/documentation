@@ -91,8 +91,10 @@
 <li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Modify Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#distribution-variables">Distribution Variables?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#adding-a-project">Adding a Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-parameters">Setting Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-project">Adding a Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setting-parameters">Setting Parameters</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="projects.html">Creating Projects</a></li>
@@ -100,7 +102,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced.html">Advanced</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../updating.html">Updating the RDTK Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../writing_recipes_primer.html">Writing Recipes Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 </ul>
 <ul>
@@ -161,30 +162,26 @@
 </div>
 <div class="section" id="adding-a-project">
 <h2>Adding a Project<a class="headerlink" href="#adding-a-project" title="Permalink to this headline">¶</a></h2>
-<p>Add a project at version</p>
+<p>To add a specific project version you can use the shorthand:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">name</span><span class="nd">@version</span>
+</pre></div>
 </div>
 <div class="section" id="setting-parameters">
-<h2>Setting Parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this headline">¶</a></h2>
-<p>example?</p>
+<h3>Setting Parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Example, setting a jenkins build timeout:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pcl</span>
+  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pcl-1.8.0</span>
+  <span class="l l-Scalar l-Scalar-Plain">parameters</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">timeout/minutes</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">600</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
 
 
   
-  
-  
- <script type="text/javascript">
-    $(document).ready(function() {
-        $(".toggle > *").hide();
-        $(".toggle .header").show();
-        $(".toggle .header").click(function() {
-            $(this).parent().children().not(".header").toggle(400);
-            $(this).parent().children(".header").toggleClass("open");
-        })
-    });
-</script>
-
 
 
            </div>
@@ -237,7 +234,6 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/language_data.js"></script>
 
   
 

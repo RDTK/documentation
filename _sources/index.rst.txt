@@ -10,7 +10,6 @@ Welcome to |project|'s documentation!
    getting_started
    advanced
    updating
-   writing_recipes_primer
    faq
 
 .. toctree::
