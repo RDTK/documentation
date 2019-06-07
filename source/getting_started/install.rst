@@ -12,7 +12,7 @@ Open a terminal and run:
     sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev \
     python-setuptools git subversion maven build-essential cmake
 
-In general, you can install the RDTK in any location (prefix). However, in order
+In general, you can install the |project| in any location (prefix). However, in order
 to establish a common configuration for the tutorials we declare:
 
 .. code-block:: bash
@@ -21,14 +21,16 @@ to establish a common configuration for the tutorials we declare:
 
 Also, please note if you open new shells/terminals in this tutorial, remember to export
 ``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``
-to your ``$HOME/.bashrc``.
+to your :file:`$HOME/.bashrc`.
+
 
 Installing Jenkins
 ------------------
 
-First you need to download the build-generator from https://github.com/RDTK/generator/releases/latest
-Change-dir to the download folder of the build-generator binary (replace VERSION) ...
-
+First you need to download the :program:`build-generator` from
+https://github.com/RDTK/generator/releases/latest. Change-dir to the
+download folder of the :program:`build-generator` binary (replace
+:samp:`{VERSION}`) ...
 
 .. code-block:: bash
 
@@ -50,8 +52,9 @@ You can find the login dialog in the top right corner.
 Clone Recipes
 -------------
 
-To get the recipes and distributions included in the |project|, please execute the following
-code block in a terminal.
+To get the :term:`recipes <recipe>` and :term:`distributions
+<distribution>` included in the |project|, please execute the
+following code block in a terminal.
 
 .. code-block:: bash
 
@@ -62,16 +65,17 @@ code block in a terminal.
 Generate Distribution Jobs and Dependency Installation
 ------------------------------------------------------
 
-Next, to generate Build Jobs on your freshly installed Jenkins CI Server, you need to provide a
-distribution file. You can 'find' distributions in:
+Next, to generate Build Jobs on your freshly installed Jenkins_ CI
+Server, you need to provide a :term:`distribution` file. You can
+'find' distributions in:
 
 .. code-block:: bash
 
    cd $RDTK_ROOT/citk/distributions
    ls
 
-
-Projects incorporated in a distribution can be found in:
+:term:`Projects <project>` incorporated in a distribution can be found
+in:
 
 .. code-block:: bash
 
@@ -84,7 +88,7 @@ As an example we will generate all build jobs for the ``build-generator-nightly.
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   ./build-generator platform-requirements --platform ubuntu \ 
+   ./build-generator platform-requirements --platform ubuntu \
    citk/distributions/build-generator-nightly.distribution
    # Exemplary generator output:
    # Found 12 platform requirements for ubuntu:
@@ -96,7 +100,8 @@ The printed platform dependencies must be installed system-wide, which results f
 
    sudo apt-get install curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev
 
-Subsequently, the build jobs for the distribution can be generated and deployed to Jenkins:
+Subsequently, the build jobs for the :term:`distribution` can be
+generated and deployed to Jenkins_:
 
 .. code-block:: bash
 
@@ -106,15 +111,20 @@ Subsequently, the build jobs for the distribution can be generated and deployed 
    citk/distributions/build-generator-nightly.distribution
 
 
-If you reload https://localhost:8080 you should see newly generated jobs.
-In order to build and deploy your distribution find a job named **-orchestrate** and
-trigger it using the stopwatch icon. **NOTE:** distributions define an *install prefix*
-as follows
+If you reload https://localhost:8080 you should see newly generated
+jobs.  In order to build and deploy your :term:`distribution` find a
+job named **-orchestrate** and trigger it using the stopwatch
+icon.
 
-.. code-block:: bash
+.. note::
 
-  toolkit.volume: /tmp/
-  toolkit.dir: ${toolkit.volume}/${distribution-name}
+   :term:`Distributions <distribution>` define an *install prefix* as
+   follows:
 
-In the scope of this tutorial you can find the result of the build in
-in ``/tmp/build-generator-nightly``
+   .. code-block:: yaml
+
+      toolkit.volume: /tmp/
+      toolkit.dir: ${toolkit.volume}/${distribution-name}
+
+   In the scope of this tutorial you can find the result of the build in
+   in :file:`/tmp/build-generator-nightly`.
