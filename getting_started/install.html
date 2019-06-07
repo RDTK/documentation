@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install &mdash; RDTK  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="RDTK  documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started" href="../getting_started.html"/>
+        <link rel="next" title="Modify Distribution" href="modify.html"/>
+        <link rel="prev" title="Getting Started" href="../getting_started.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RDTK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../vision_concept.html">Vision and Concept</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-jenkins">Installing Jenkins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clone-recipes">Clone Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-distribution-jobs-and-dependency-installation">Generate Distribution Jobs and Dependency Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modify.html">Modify Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Creating Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced.html">Advanced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Updating the RDTK Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_recipes_primer.html">Writing Recipes Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">RDTK</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../getting_started.html">Getting Started</a> &raquo;</li>
+      
+    <li>Install</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/getting_started/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+  
+  <div class="section" id="install">
+<h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial serves as an introduction. The resulting installation is fully usable – however, if you
+plan to deploy a ‘production’ system, please also consider the reading <a class="reference internal" href="../advanced.html#advanced"><span class="std std-ref">Advanced</span></a> configuration.</p>
+<p>Now, in order to get started, you will need to install the following dependencies to run RDTK tools.
+Open a terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev <span class="se">\</span>
+python-setuptools git subversion maven build-essential cmake
+</pre></div>
+</div>
+<p>In general, you can install the RDTK in any location (prefix). However, in order
+to establish a common configuration for the tutorials we declare:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RDTK_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/RDTK
+</pre></div>
+</div>
+<p>Also, please note if you open new shells/terminals in this tutorial, remember to export
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">RDTK_ROOT=$HOME/RDTK</span></code> in the new shell. Alternatively, add <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">RDTK_ROOT=$HOME/RDTK</span></code>
+to your <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code>.</p>
+<div class="section" id="installing-jenkins">
+<h2>Installing Jenkins<a class="headerlink" href="#installing-jenkins" title="Permalink to this headline">¶</a></h2>
+<p>First you need to download the build-generator from <a class="reference external" href="https://github.com/RDTK/generator/releases/latest">https://github.com/RDTK/generator/releases/latest</a>
+Change-dir to the download folder of the build-generator binary (replace VERSION) …</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod u+x build-generator-VERSION-x86_64-linux
+mv build-generator-VERSION-x86_64-linux <span class="nv">$RDTK_ROOT</span>
+<span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
+ln -s build-generator-VERSION-x86_64-linux build-generator
+<span class="c1"># Change USER_NAME_CHANGE_ME &amp; PW_CHANGE_ME &amp; name@foo.com (email)</span>
+./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p <span class="se">\</span>
+PW_CHANGE_ME -e name@foo.com install-test
+<span class="c1"># This might take between 60 and 300 seconds</span>
+<span class="nb">cd</span> install-test
+./start_jenkins
+</pre></div>
+</div>
+<p>Now open your browser and visit: <a class="reference external" href="https://localhost:8080">https://localhost:8080</a> use username and password to login.
+You can find the login dialog in the top right corner.</p>
+</div>
+<div class="section" id="clone-recipes">
+<h2>Clone Recipes<a class="headerlink" href="#clone-recipes" title="Permalink to this headline">¶</a></h2>
+<p>To get the recipes and distributions included in the RDTK, please execute the following
+code block in a terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
+git clone https://opensource.cit-ec.de/git/citk
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-distribution-jobs-and-dependency-installation">
+<h2>Generate Distribution Jobs and Dependency Installation<a class="headerlink" href="#generate-distribution-jobs-and-dependency-installation" title="Permalink to this headline">¶</a></h2>
+<p>Next, to generate Build Jobs on your freshly installed Jenkins CI Server, you need to provide a
+distribution file. You can ‘find’ distributions in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>/citk/distributions
+ls
+</pre></div>
+</div>
+<p>Projects incorporated in a distribution can be found in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>/citk/projects
+ls
+</pre></div>
+</div>
+<p>As an example we will generate all build jobs for the <code class="docutils literal notranslate"><span class="pre">build-generator-nightly.distribution</span></code>
+<a class="reference external" href="https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution">(source)</a> and the required platform dependencies.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
+./build-generator platform-requirements --platform ubuntu <span class="se">\</span>
+citk/distributions/build-generator-nightly.distribution
+<span class="c1"># Exemplary generator output:</span>
+<span class="c1"># Found 12 platform requirements for ubuntu:</span>
+<span class="c1"># curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev</span>
+</pre></div>
+</div>
+<p>The printed platform dependencies must be installed system-wide, which results for the running examples in the following command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install curl file gcc git libssl1.0.0 make sbcl tar <span class="nb">time</span> unp unzip zlib1g-dev
+</pre></div>
+</div>
+<p>Subsequently, the build jobs for the distribution can be generated and deployed to Jenkins:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
+./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME <span class="se">\</span>
+-D <span class="s1">&#39;view.create?=true&#39;</span> -D view.name<span class="o">=</span><span class="s1">&#39;Bootstrapping Tutorial&#39;</span> <span class="se">\</span>
+citk/distributions/build-generator-nightly.distribution
+</pre></div>
+</div>
+<p>If you reload <a class="reference external" href="https://localhost:8080">https://localhost:8080</a> you should see newly generated jobs.
+In order to build and deploy your distribution find a job named <strong>-orchestrate</strong> and
+trigger it using the stopwatch icon. <strong>NOTE:</strong> distributions define an <em>install prefix</em>
+as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>toolkit.volume: /tmp/
+toolkit.dir: <span class="si">${</span><span class="nv">toolkit</span><span class="p">.volume</span><span class="si">}</span>/<span class="si">${</span><span class="nv">distribution</span><span class="p">-name</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>In the scope of this tutorial you can find the result of the build in
+in <code class="docutils literal notranslate"><span class="pre">/tmp/build-generator-nightly</span></code></p>
+</div>
+</div>
+
+
+
+  
+  
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+
+           </div>
+          </div>
+          <footer>
+    <div role="contentinfo">
+        <span class="creativecommons">
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License"
+                     style="border-width:0; height:15px; width:80px;" 
+                     src="https://i.creativecommons.org/l/by/4.0/80x15.png"/></a>
+            <span xmlns:dct="http://purl.org/dc/terms/"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title"
+                  rel="dct:type">
+                The RDTK documentation
+            </span>
+            is licensed under a
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a>.
+        </span>
+        <span class="lastupdated">
+            Last updated on None.
+        </span>
+    </div>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
