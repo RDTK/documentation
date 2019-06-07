@@ -41,6 +41,9 @@ inclusion of 3rd-party elements and complex dependency structures.
    getting_started
    advanced
    updating
+
+   reference
+
    faq
 
 .. toctree::
