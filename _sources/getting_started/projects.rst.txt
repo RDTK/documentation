@@ -5,24 +5,24 @@ Creating Projects
 Creating a Project
 ------------------
 
-Create the project under citk/projects with the following content:
+Create the :term:`project` :term:`recipe` in the :file:`citk/projects`
+directory with the following content, replacing :samp:`{URL}` and
+:samp:`{BUILDTYPE}` with appropriate values:
 
 .. code-block:: YAML
 
     templates:
-    - <BUILDTYPE>
+    - BUILDTYPE
     - base
 
     variables:
-      repository: <URL>
+      repository: URL
 
     branches:
     - master
 
-Replace URL and BUILDTYPE.
-
-The <BUILDTYPE> template depends on your project style.
-
+The :samp:`{BUILDTYPE}` :term:`template` depends on your project
+:term:`nature`.
 
 Templates
 .........
@@ -33,7 +33,7 @@ Templates
 
         **CMAKE**
 
-    Use the ``cmake`` Template.
+    Use the ``cmake`` :term:`template`.
 
 
 .. container:: toggle
@@ -42,9 +42,11 @@ Templates
 
         **JAVA**
 
-    For Maven projects add the ``maven`` Template.
-    
-    This will run mvn install deploy and dependency:copy-dependencies targets.
+    For Maven_ :term:`projects <project>` add the ``maven``
+    :term:`template`.
+
+    This will ``run mvn install deploy`` and
+    ``dependency:copy-dependencies`` targets.
 
     Additional targets can be added with the ``maven.targets`` variable:
 
@@ -55,7 +57,7 @@ Templates
           maven.targets:
           - foo
           - bar
-    
+
 
 .. container:: toggle
 
@@ -63,7 +65,8 @@ Templates
 
         **ROS**
 
-    If your repository contains multiple packages your should use catkin tools to build them using the ``catkin`` Template.
+    If your repository contains multiple packages your should use
+    catkin tools to build them using the ``catkin`` :term:`template`.
 
 
 .. container:: toggle
@@ -72,30 +75,32 @@ Templates
 
         **Python**
 
-    If the project contains a setup.py you need to use the ``setuptools`` Template.
+    If the project contains a :file:`setup.py` you need to use the
+    ``setuptools`` :term:`template`.
 
-More Templates and their variables can be found here_
+More :term:`templates <template>` and their variables can be found
+here_
 
 
 Adding a Github Project
 -----------------------
 
-Create the project under citk/projects with the following content, replacing <user> and <project> with the organization and project names:
+Create the :term:`project` :term:`recipe` in the :file:`citk/projects`
+directory with the following content, replacing :samp:`{USER}` and
+:samp:`{PROJECT}` with the organization and project name respectively:
 
 .. code-block:: YAML
 
     templates:
-    - <BUILDTYPE>
+    - BUILDTYPE
     - github
     - base
 
     variables:
-      github.user: <user>
-      github.project: <project>
+      github.user: USER
+      github.project: PROJECT
 
     branches:
     - master
 
-
-
-.. _here: todo 
+.. _here: todo

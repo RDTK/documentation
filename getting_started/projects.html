@@ -176,32 +176,36 @@
 <h1>Creating Projects<a class="headerlink" href="#creating-projects" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="creating-a-project">
 <h2>Creating a Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h2>
-<p>Create the project under citk/projects with the following content:</p>
+<p>Create the <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> <a class="reference internal" href="../glossary.html#term-recipe"><span class="xref std std-term">recipe</span></a> in the <code class="file docutils literal notranslate"><span class="pre">citk/projects</span></code>
+directory with the following content, replacing <code class="samp docutils literal notranslate"><em><span class="pre">URL</span></em></code> and
+<code class="samp docutils literal notranslate"><em><span class="pre">BUILDTYPE</span></em></code> with appropriate values:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">templates</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;BUILDTYPE&gt;</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">BUILDTYPE</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">base</span>
 
 <span class="nt">variables</span><span class="p">:</span>
-  <span class="nt">repository</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;URL&gt;</span>
+  <span class="nt">repository</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">URL</span>
 
 <span class="nt">branches</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
 </pre></div>
 </div>
-<p>Replace URL and BUILDTYPE.</p>
-<p>The &lt;BUILDTYPE&gt; template depends on your project style.</p>
+<p>The <code class="samp docutils literal notranslate"><em><span class="pre">BUILDTYPE</span></em></code> <a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">template</span></a> depends on your project
+<a class="reference internal" href="../glossary.html#term-nature"><span class="xref std std-term">nature</span></a>.</p>
 <div class="section" id="templates">
 <h3>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
 <div class="toggle docutils container">
 <div class="header docutils container">
 <strong>CMAKE</strong></div>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> Template.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> <a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">template</span></a>.</p>
 </div>
 <div class="toggle docutils container">
 <div class="header docutils container">
 <strong>JAVA</strong></div>
-<p>For Maven projects add the <code class="docutils literal notranslate"><span class="pre">maven</span></code> Template.</p>
-<p>This will run mvn install deploy and dependency:copy-dependencies targets.</p>
+<p>For <a class="reference external" href="https://maven.apache.org/">Maven</a> <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a> add the <code class="docutils literal notranslate"><span class="pre">maven</span></code>
+<a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">template</span></a>.</p>
+<p>This will <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">mvn</span> <span class="pre">install</span> <span class="pre">deploy</span></code> and
+<code class="docutils literal notranslate"><span class="pre">dependency:copy-dependencies</span></code> targets.</p>
 <p>Additional targets can be added with the <code class="docutils literal notranslate"><span class="pre">maven.targets</span></code> variable:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span>
 
@@ -214,27 +218,32 @@
 <div class="toggle docutils container">
 <div class="header docutils container">
 <strong>ROS</strong></div>
-<p>If your repository contains multiple packages your should use catkin tools to build them using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> Template.</p>
+<p>If your repository contains multiple packages your should use
+catkin tools to build them using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> <a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">template</span></a>.</p>
 </div>
 <div class="toggle docutils container">
 <div class="header docutils container">
 <strong>Python</strong></div>
-<p>If the project contains a setup.py you need to use the <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> Template.</p>
+<p>If the project contains a <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> you need to use the
+<code class="docutils literal notranslate"><span class="pre">setuptools</span></code> <a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">template</span></a>.</p>
 </div>
-<p>More Templates and their variables can be found <a class="reference external" href="todo">here</a></p>
+<p>More <a class="reference internal" href="../glossary.html#term-template"><span class="xref std std-term">templates</span></a> and their variables can be found
+<a class="reference external" href="todo">here</a></p>
 </div>
 </div>
 <div class="section" id="adding-a-github-project">
 <h2>Adding a Github Project<a class="headerlink" href="#adding-a-github-project" title="Permalink to this headline">¶</a></h2>
-<p>Create the project under citk/projects with the following content, replacing &lt;user&gt; and &lt;project&gt; with the organization and project names:</p>
+<p>Create the <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> <a class="reference internal" href="../glossary.html#term-recipe"><span class="xref std std-term">recipe</span></a> in the <code class="file docutils literal notranslate"><span class="pre">citk/projects</span></code>
+directory with the following content, replacing <code class="samp docutils literal notranslate"><em><span class="pre">USER</span></em></code> and
+<code class="samp docutils literal notranslate"><em><span class="pre">PROJECT</span></em></code> with the organization and project name respectively:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">templates</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;BUILDTYPE&gt;</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">BUILDTYPE</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">base</span>
 
 <span class="nt">variables</span><span class="p">:</span>
-  <span class="nt">github.user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;user&gt;</span>
-  <span class="nt">github.project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;project&gt;</span>
+  <span class="nt">github.user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">USER</span>
+  <span class="nt">github.project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PROJECT</span>
 
 <span class="nt">branches</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
