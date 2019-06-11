@@ -12,6 +12,4 @@
 
 The following tools are available:
 
-* :ref:`build-generator <tool-build-generator>`
-
-  TODO
+* :ref:`build-generator <build-generator>` -- Processes :term:`recipes <recipe>`, generates Jenkins_ jobs and other things
