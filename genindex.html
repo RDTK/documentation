@@ -87,6 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updating.html">Updating the RDTK Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/build-generator.html">build-generator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
@@ -158,27 +159,473 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
+ <a href="#Symbols"><strong>Symbols</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  
 </div>
+<h2 id="Symbols">Symbols</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --api-token=API-TOKEN
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-api-token">generate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --base-uri=URI
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-base-uri">generate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --cache-age-limit=AGE-IN-SECONDS
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-cache-age-limit">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --cache-directory=DIRECTORY
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-cache-directory">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --debug
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-debug">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --delete-other
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-delete-other">generate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --delete-other-pattern=REGEX
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-delete-other-pattern">generate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --email=EMAIL-ADDRESS
+
+      <ul>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-email">create-jenkins-user command line option</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-email">install-jenkins command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --filter=REGEX
+
+      <ul>
+        <li><a href="tools/build-generator-info-variables.html#cmdoption-info-variables-filter">info-variables command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --jenkins-download-url=URL
+
+      <ul>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-jenkins-download-url">install-jenkins command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --mode=MODE
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-mode">generate command line option</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-mode">platform-requirements command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --nature=NATURE
+
+      <ul>
+        <li><a href="tools/build-generator-analyze.html#cmdoption-analyze-nature">analyze command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --on-error=POLICY
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-on-error">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --password=PASSWORD
+
+      <ul>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-password">create-jenkins-user command line option</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-password">generate command line option</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-password">install-jenkins command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --platform=PLATFORM-SPEC
+
+      <ul>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-platform">platform-requirements command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --plugin=PLUGIN
+
+      <ul>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-plugin">install-jenkins command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --profile=PROFILE
+
+      <ul>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-profile">install-jenkins command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --progress-style=STYLE
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-progress-style">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --set=VARIABLE-NAME=VALUE
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-set">generate command line option</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-set">platform-requirements command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --temp-directory=DIRECTORY
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-temp-directory">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --trace-variable=VARIABLE-NAME
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-trace-variable">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --username=LOGIN
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-username">generate command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --username=USENAME
+
+      <ul>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-username">create-jenkins-user command line option</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-username">install-jenkins command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --version
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-version">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -c=COUNT
+
+      <ul>
+        <li><a href="tools/build-generator-version.html#cmdoption-version-c">version command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -D=VARIABLE-NAME=VALUE
+
+      <ul>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-d">report command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -h
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-h">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -j=NUMBER-OF-PROCESSES
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-j">build-generator command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -k=KIND
+
+      <ul>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-k">report command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -m=MODE
+
+      <ul>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-m">report command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -o=DIRECTORY
+
+      <ul>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-o">report command line option</a>
+</li>
+      </ul></li>
+      <li>
+    [COMMAND-NAME]
+
+      <ul>
+        <li><a href="tools/build-generator-help.html#cmdoption-help-arg-command-name">help command line option</a>
+</li>
+      </ul></li>
+      <li>
+    [OPTION]
+
+      <ul>
+        <li><a href="tools/build-generator-config.html#cmdoption-config-arg-option">config command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    ACTION
+
+      <ul>
+        <li><a href="tools/build-generator-config.html#cmdoption-config-arg-action">config command line option</a>
+</li>
+      </ul></li>
+      <li>
+    analyze command line option
+
+      <ul>
+        <li><a href="tools/build-generator-analyze.html#cmdoption-analyze-nature">--nature=NATURE</a>
+</li>
+        <li><a href="tools/build-generator-analyze.html#cmdoption-analyze-arg-uri-or-directory">URI-OR-DIRECTORY*</a>
+</li>
+      </ul></li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-aspect"><strong>aspect</strong></a>
 </li>
   </ul></td>
 </tr></table>
 
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    build-generator command line option
+
+      <ul>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-cache-age-limit">--cache-age-limit=AGE-IN-SECONDS</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-cache-directory">--cache-directory=DIRECTORY</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-debug">--debug</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-on-error">--on-error=POLICY</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-progress-style">--progress-style=STYLE</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-temp-directory">--temp-directory=DIRECTORY</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-trace-variable">--trace-variable=VARIABLE-NAME</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-version">--version</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-h">-h</a>
+</li>
+        <li><a href="tools/build-generator.html#cmdoption-build-generator-j">-j=NUMBER-OF-PROCESSES</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    config command line option
+
+      <ul>
+        <li><a href="tools/build-generator-config.html#cmdoption-config-arg-action">ACTION</a>
+</li>
+        <li><a href="tools/build-generator-config.html#cmdoption-config-arg-option">[OPTION]</a>
+</li>
+      </ul></li>
+      <li>
+    create-jenkins-user command line option
+
+      <ul>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-email">--email=EMAIL-ADDRESS</a>
+</li>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-password">--password=PASSWORD</a>
+</li>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-username">--username=USENAME</a>
+</li>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-arg-directory">DIRECTORY</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    DIRECTORY
+
+      <ul>
+        <li><a href="tools/build-generator-create-jenkins-user.html#cmdoption-create-jenkins-user-arg-directory">create-jenkins-user command line option</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-arg-directory">install-jenkins command line option</a>
+</li>
+      </ul></li>
       <li><a href="glossary.html#term-distribution"><strong>distribution</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    DISTRIBUTION-NAME*
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-arg-distribution-name">generate command line option</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-arg-distribution-name">platform-requirements command line option</a>
+</li>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-arg-distribution-name">report command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    FILENAME-OR-DIRECTORY
+
+      <ul>
+        <li><a href="tools/build-generator-validate.html#cmdoption-validate-arg-filename-or-directory">validate command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    generate command line option
+
+      <ul>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-api-token">--api-token=API-TOKEN</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-base-uri">--base-uri=URI</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-delete-other">--delete-other</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-delete-other-pattern">--delete-other-pattern=REGEX</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-mode">--mode=MODE</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-password">--password=PASSWORD</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-set">--set=VARIABLE-NAME=VALUE</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-username">--username=LOGIN</a>
+</li>
+        <li><a href="tools/build-generator-generate.html#cmdoption-generate-arg-distribution-name">DISTRIBUTION-NAME*</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    help command line option
+
+      <ul>
+        <li><a href="tools/build-generator-help.html#cmdoption-help-arg-command-name">[COMMAND-NAME]</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    info-variables command line option
+
+      <ul>
+        <li><a href="tools/build-generator-info-variables.html#cmdoption-info-variables-filter">--filter=REGEX</a>
+</li>
+      </ul></li>
+      <li>
+    install-jenkins command line option
+
+      <ul>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-email">--email=EMAIL-ADDRESS</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-jenkins-download-url">--jenkins-download-url=URL</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-password">--password=PASSWORD</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-plugin">--plugin=PLUGIN</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-profile">--profile=PROFILE</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-username">--username=USENAME</a>
+</li>
+        <li><a href="tools/build-generator-install-jenkins.html#cmdoption-install-jenkins-arg-directory">DIRECTORY</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -193,6 +640,21 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    platform-requirements command line option
+
+      <ul>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-mode">--mode=MODE</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-platform">--platform=PLATFORM-SPEC</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-set">--set=VARIABLE-NAME=VALUE</a>
+</li>
+        <li><a href="tools/build-generator-platform-requirements.html#cmdoption-platform-requirements-arg-distribution-name">DISTRIBUTION-NAME*</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-project"><strong>project</strong></a>
 </li>
   </ul></td>
@@ -203,6 +665,21 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-recipe"><strong>recipe</strong></a>
 </li>
+      <li>
+    report command line option
+
+      <ul>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-d">-D=VARIABLE-NAME=VALUE</a>
+</li>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-k">-k=KIND</a>
+</li>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-m">-m=MODE</a>
+</li>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-o">-o=DIRECTORY</a>
+</li>
+        <li><a href="tools/build-generator-report.html#cmdoption-report-arg-distribution-name">DISTRIBUTION-NAME*</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -211,6 +688,41 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-template"><strong>template</strong></a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    URI-OR-DIRECTORY*
+
+      <ul>
+        <li><a href="tools/build-generator-analyze.html#cmdoption-analyze-arg-uri-or-directory">analyze command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    validate command line option
+
+      <ul>
+        <li><a href="tools/build-generator-validate.html#cmdoption-validate-arg-filename-or-directory">FILENAME-OR-DIRECTORY</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    version command line option
+
+      <ul>
+        <li><a href="tools/build-generator-version.html#cmdoption-version-c">-c=COUNT</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 

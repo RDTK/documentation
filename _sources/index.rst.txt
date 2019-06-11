@@ -42,6 +42,8 @@ inclusion of 3rd-party elements and complex dependency structures.
    advanced
    updating
 
+   build-generator <tools/build-generator>
+
    reference
 
    faq

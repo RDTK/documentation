@@ -18,6 +18,7 @@ to establish a common configuration for the tutorials we declare:
 .. code-block:: bash
 
    export RDTK_ROOT=$HOME/RDTK
+   mkdir -p $RDTK_ROOT   
 
 Also, please note if you open new shells/terminals in this tutorial, remember to export
 ``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``

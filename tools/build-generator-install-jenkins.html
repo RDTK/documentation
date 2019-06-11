@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install-Jenkins &mdash; RDTK  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Platform-Requirements" href="build-generator-platform-requirements.html" />
+    <link rel="prev" title="Info-Variables" href="build-generator-info-variables.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RDTK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../vision_concept.html">Vision and Concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced.html">Advanced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../updating.html">Updating the RDTK Tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="build-generator.html">build-generator</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="build-generator.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="build-generator.html#supported-commands">Supported Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="build-generator-analyze.html">Analyze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-config.html">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-create-jenkins-user.html">Create-Jenkins-User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-generate.html">Generate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-help.html">Help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-info-aspects.html">Info-Aspects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-info-variables.html">Info-Variables</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Install-Jenkins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-platform-requirements.html">Platform-Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-report.html">Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-validate.html">Validate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-version.html">Version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-generator.html#global-options">Global Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RDTK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="build-generator.html">build-generator</a> &raquo;</li>
+        
+      <li>Install-Jenkins</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/build-generator-install-jenkins.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+  
+  <div class="section" id="install-jenkins">
+<span id="command-install-jenkins"></span><h1>Install-Jenkins<a class="headerlink" href="#install-jenkins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p><code class="samp docutils literal notranslate"><span class="pre">build-generator</span> <em><span class="pre">[GLOBAL-OPTIONS]</span></em> <span class="pre">install-jenkins</span> <span class="pre">[COMMAND-OPTIONS]</span> <span class="pre">DIRECTORY</span></code></p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Install and configure a Jenkins CI server.</p>
+<ul class="simple">
+<li>Download Jenkins itself.</li>
+<li>Download and install Jenkins plugins needed by the build generator.</li>
+<li>Install Jenkins configuration files that make the instance work well with the
+build-generator.</li>
+<li>Optionally, if username, email and password are supplied, set up a user
+account.</li>
+</ul>
+<dl class="option">
+<dt id="cmdoption-install-jenkins-password">
+<code class="descname">--password</code><code class="descclassname">=PASSWORD</code><a class="headerlink" href="#cmdoption-install-jenkins-password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Password for the initial user account.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-email">
+<code class="descname">--email</code><code class="descclassname">=EMAIL-ADDRESS</code><a class="headerlink" href="#cmdoption-install-jenkins-email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Email-address for the initial user account.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-username">
+<code class="descname">--username</code><code class="descclassname">=USENAME</code><a class="headerlink" href="#cmdoption-install-jenkins-username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Username for the initial user account.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-plugin">
+<code class="descname">--plugin</code><code class="descclassname">=PLUGIN</code><a class="headerlink" href="#cmdoption-install-jenkins-plugin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">(extra-columns)</span></code></p>
+<p>List of plugins to install in addition to the required ones.</p>
+<p>The following plugins are required and will be installed in any case:</p>
+<ul class="simple">
+<li>ansicolor</li>
+<li>build-timeout</li>
+<li>checkstyle</li>
+<li>copyartifact</li>
+<li>git</li>
+<li>github</li>
+<li>groovy</li>
+<li>htmlpublisher</li>
+<li>junit</li>
+<li>mailer</li>
+<li>mercurial</li>
+<li>pmd</li>
+<li>publish-over-ssh</li>
+<li>redmine</li>
+<li>sloccount</li>
+<li>sonar</li>
+<li>subversion</li>
+<li>tasks</li>
+<li>timestamper</li>
+<li>warnings</li>
+<li>warnings-ng</li>
+<li>xunit</li>
+</ul>
+<p>This option can be supplied multiple times.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-jenkins-download-url">
+<code class="descname">--jenkins-download-url</code><code class="descclassname">=URL</code><a class="headerlink" href="#cmdoption-install-jenkins-jenkins-download-url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">URI</span></code> Default: <code class="docutils literal notranslate"><span class="pre">http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war</span></code></p>
+<p>URL from which the Jenkins archive should be downloaded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-profile">
+<code class="descname">--profile</code><code class="descclassname">=PROFILE</code><a class="headerlink" href="#cmdoption-install-jenkins-profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(MEMBER</span> <span class="pre">SINGLE-USER</span> <span class="pre">LOCAL-DOCKER)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">SINGLE-USER</span></code></p>
+<p>A Jenkins usage profile to which the installation should be tailored.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-install-jenkins-arg-directory">
+<code class="descname">DIRECTORY</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-install-jenkins-arg-directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">DIRECTORY-PATHNAME</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Destination directory for the Jenkins installation.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+
+  
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div role="contentinfo">
+        <span class="creativecommons">
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License"
+                     style="border-width:0; height:15px; width:80px;" 
+                     src="https://i.creativecommons.org/l/by/4.0/80x15.png"/></a>
+            <span xmlns:dct="http://purl.org/dc/terms/"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title"
+                  rel="dct:type">
+                The RDTK documentation
+            </span>
+            is licensed under a
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a>.
+        </span>
+        <span class="lastupdated">
+            Last updated on None.
+        </span>
+    </div>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

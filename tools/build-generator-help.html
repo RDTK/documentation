@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Modify Distribution &mdash; RDTK  documentation</title>
+  <title>Help &mdash; RDTK  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating Projects" href="projects.html" />
-    <link rel="prev" title="Install" href="install.html" /> 
+    <link rel="next" title="Info-Aspects" href="build-generator-info-aspects.html" />
+    <link rel="prev" title="Generate" href="build-generator-generate.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,22 +85,33 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../vision_concept.html">Vision and Concept</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Modify Distribution</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#distribution-variables">Distribution Variables?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#adding-a-project">Adding a Project</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#setting-parameters">Setting Parameters</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="projects.html">Creating Projects</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced.html">Advanced</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../updating.html">Updating the RDTK Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/build-generator.html">build-generator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="build-generator.html">build-generator</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="build-generator.html#synopsis">Synopsis</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="build-generator.html#supported-commands">Supported Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="build-generator-analyze.html">Analyze</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-config.html">Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-create-jenkins-user.html">Create-Jenkins-User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-generate.html">Generate</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Help</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-info-aspects.html">Info-Aspects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-info-variables.html">Info-Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-install-jenkins.html">Install-Jenkins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-platform-requirements.html">Platform-Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-report.html">Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-validate.html">Validate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-generator-version.html">Version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-generator.html#global-options">Global Options</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 </ul>
@@ -151,15 +162,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../getting_started.html">Getting Started</a> &raquo;</li>
+          <li><a href="build-generator.html">build-generator</a> &raquo;</li>
         
-      <li>Modify Distribution</li>
+      <li>Help</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/getting_started/modify.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tools/build-generator-help.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,28 +185,22 @@
             
 
   
-  <div class="section" id="modify-distribution">
-<h1>Modify Distribution<a class="headerlink" href="#modify-distribution" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="distribution-variables">
-<h2>Distribution Variables?<a class="headerlink" href="#distribution-variables" title="Permalink to this headline">¶</a></h2>
-<p>Explain the head - create a new example dist</p>
+  <div class="section" id="help">
+<span id="command-help"></span><h1>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p><code class="samp docutils literal notranslate"><span class="pre">build-generator</span> <em><span class="pre">[GLOBAL-OPTIONS]</span></em> <span class="pre">help</span> <span class="pre">[COMMAND-NAME]</span></code></p>
 </div>
-<div class="section" id="adding-a-project">
-<h2>Adding a Project<a class="headerlink" href="#adding-a-project" title="Permalink to this headline">¶</a></h2>
-<p>To add a specific project version you can use the shorthand:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">name</span><span class="nd">@version</span>
-</pre></div>
-</div>
-<div class="section" id="setting-parameters">
-<h3>Setting Parameters<a class="headerlink" href="#setting-parameters" title="Permalink to this headline">¶</a></h3>
-<p>Example, setting a jenkins build timeout:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pcl</span>
-  <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pcl-1.8.0</span>
-  <span class="nt">parameters</span><span class="p">:</span>
-    <span class="nt">timeout/minutes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">600</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Print help either for all commands or for a given command.</p>
+<dl class="option">
+<dt id="cmdoption-help-arg-command-name">
+<code class="descname">[COMMAND-NAME]</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-help-arg-command-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>Nil or a command name for which to print help.</p>
+</dd></dl>
+
 </div>
 </div>
 
