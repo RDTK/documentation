@@ -5,4 +5,3 @@ Reference
    :maxdepth: 1
 
    reference/recipes
-   reference/language
