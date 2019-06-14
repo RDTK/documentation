@@ -41,6 +41,10 @@ rst_prolog = """
 
 .. _citec: https://www.cit-ec.de/en
 
+.. _json: https://json.org/
+
+.. _yaml: https://yaml.org/
+
 .. _jenkins: https://jenkins.io
 
 .. _asdf: https://common-lisp.net/project/asdf/
