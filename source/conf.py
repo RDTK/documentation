@@ -50,6 +50,8 @@ rst_prolog = """
 .. _maven: https://maven.apache.org/
 
 .. _ros: https://www.ros.org/
+
+.. _general data protection regulation: https://en.wikipedia.org/wiki/General_Data_Protection_Regulation
 """.format(project = project)
 
 # -- General configuration ---------------------------------------------------
