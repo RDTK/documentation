@@ -14,19 +14,25 @@
 
    recipes/project
    recipes/distribution
+   recipes/person
    recipes/template
 
 Kinds of recipes:
 
 :ref:`Project Recipes <recipes-project>`
 
-  Descriptions of :term:`projects <project>`
+  Descriptions of :term:`projects <project>`.
 
 :ref:`Distribution Recipes <recipes-distribution>`
 
   Descriptions of :term:`distributions <distribution>` which are
   groups of :term:`project` versions that can be built and used
   together.
+
+:ref:`Person Recipes <recipes-person>`
+
+  Information pertaining to persons involved in :term:`projects
+  <project>`, :term:`distributions <distribution>` or recipe writing.
 
 :ref:`Template Recipes <recipes-template>`
 

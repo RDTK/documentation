@@ -86,6 +86,8 @@ then recommended to enable caching, try
 :option:`cache-directory <build-generator --cache-directory>`
 and  :option:`cache-age-limit <build-generator --cache-age-limit>`.
 
+.. _web-catalog:
+
 Generate Catalog Representation
 -------------------------------
 

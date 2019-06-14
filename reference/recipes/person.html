@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Distribution Recipes &mdash; RDTK  documentation</title>
+  <title>Person Recipes &mdash; RDTK  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Person Recipes" href="person.html" />
-    <link rel="prev" title="Project Recipes" href="project.html" /> 
+    <link rel="next" title="Templates" href="template.html" />
+    <link rel="prev" title="Distribution Recipes" href="distribution.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,8 +93,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../reference.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../recipes.html">Recipes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="project.html">Project Recipes</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Distribution Recipes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="person.html">Person Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distribution.html">Distribution Recipes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Person Recipes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#person-recipe-syntax">Person Recipe Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#important-fields">Important Fields</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="template.html">Templates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../recipes.html#variables-and-the-substitution-sub-language">Variables and the Substitution Sub-Language</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../recipes.html#access-and-credentials">Access and Credentials</a></li>
@@ -156,13 +160,13 @@
         
           <li><a href="../recipes.html">Recipes</a> &raquo;</li>
         
-      <li>Distribution Recipes</li>
+      <li>Person Recipes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/reference/recipes/distribution.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/recipes/person.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -177,80 +181,67 @@
             
 
   
-  <div class="section" id="distribution-recipes">
-<span id="recipes-distribution"></span><h1>Distribution Recipes<a class="headerlink" href="#distribution-recipes" title="Permalink to this headline">¶</a></h1>
-<p>TODO introduction see project-recipe</p>
-<p>A basic <a class="reference internal" href="../../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a> description, which in this case would be
-stored in a file named <code class="file docutils literal notranslate"><span class="pre">toolkit.distribution</span></code>, looks like this:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">…</span>
+  <div class="section" id="person-recipes">
+<span id="recipes-person"></span><h1>Person Recipes<a class="headerlink" href="#person-recipes" title="Permalink to this headline">¶</a></h1>
+<p>This kind of recipe specifies information about a person involved in
+<a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">projects</span></a> or <a class="reference internal" href="../../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a>
+described in the recipe repository. Being involved may mean appearing
+in the <code class="docutils literal notranslate"><span class="pre">recipe.maintainer</span></code> variable of a recipe, appearing in a
+<a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">project’s</span></a> version control log or appearing in a
+<a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">project’s</span></a> build system-level metadata. The
+information specified in person recipes is mainly used for
+documentation and reporting purposes such as generating the RDTK
+<a class="reference internal" href="../../advanced.html#web-catalog"><span class="std std-ref">web catalog</span></a>.</p>
+<div class="section" id="person-recipe-syntax">
+<h2>Person Recipe Syntax<a class="headerlink" href="#person-recipe-syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Jane Doe</span>
 
-<span class="nt">include</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">…</span>
+<span class="nt">aliases</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jdoe</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ai_hacker_3117</span>
 
-<span class="nt">versions</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">project₁@version₁</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">project₂@version₂</span>
-  <span class="l l-Scalar l-Scalar-Plain">…</span>
+<span class="nt">identities</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mailto:jdoe@employer.example</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mailto:jane.doe@private-email-address.example</span>
+
+<span class="nt">variables</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">gdpr.opt-in?</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-<p>The following fields are most important:</p>
+</div>
+<div class="section" id="important-fields">
+<h2>Important Fields<a class="headerlink" href="#important-fields" title="Permalink to this headline">¶</a></h2>
 <p><code class="samp docutils literal notranslate"><em><span class="pre">FILENAME</span></em></code></p>
 <blockquote>
-<div><p>This is not an actual field but the name of the <a class="reference internal" href="../../glossary.html#term-recipe"><span class="xref std std-term">recipe file</span></a> with its extension removed (e.g. <code class="docutils literal notranslate"><span class="pre">rsb</span></code> for a
-<a class="reference internal" href="../../glossary.html#term-recipe"><span class="xref std std-term">recipe file</span></a> named <code class="file docutils literal notranslate"><span class="pre">rsb.distribution</span></code>).</p>
-<p>TODO</p>
+<div>In contrast to other recipe kinds, the filename is not significant
+for person recipes.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code></p>
+<blockquote>
+<div>The “primary” name for the person. This should be the name the
+person wants to be addressed as.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">aliases</span></code></p>
+<blockquote>
+<div>A list of additional names the person may be addressed as. This can
+be used to associate appearances to a person that have no apparent
+connection. For example, project metadata containing an entry like
+<code class="docutils literal notranslate"><span class="pre">&lt;author&gt;ai_hacker_3117&lt;/author&gt;</span></code> could not automatically be
+associated with a person whose only name was <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">Jane</span> <span class="pre">Doe</span></code>. But
+adding the name to the <code class="docutils literal notranslate"><span class="pre">aliases</span></code> section enables the association.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">identities</span></code></p>
+<blockquote>
+<div>A list of email addresses belonging to a person. As with
+<code class="docutils literal notranslate"><span class="pre">aliases</span></code>, multiple entries can be used to associate appearances
+with different email addresses with the person entity.</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">variables</span></code> » <code class="docutils literal notranslate"><span class="pre">gdpr.opt-in?</span></code></p>
+<blockquote>
+<div><p>A Boolean indicating whether the person agrees to having their
+information processed in the sense of the EU’s <a class="reference external" href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">general data
+protection regulation</a>.</p>
+<p>When the RDTK <a class="reference internal" href="../../advanced.html#web-catalog"><span class="std std-ref">web catalog</span></a> is being
+generated in GDPR-compliance mode, the specified value controls
+whether an entry is created for the person.</p>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">variables</span></code></p>
-<blockquote>
-<div>TODO</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">include</span></code></p>
-<blockquote>
-<div>TODO</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code></p>
-<blockquote>
-<div><p>A list of <a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">project</span></a> names and versions with elements of the
-form</p>
-<pre class="literal-block">
-<code class="samp docutils literal notranslate"><em><span class="pre">NAME</span></em><span class="pre">&#64;</span><em><span class="pre">VERSION</span></em></code>
-<code class="samp docutils literal notranslate"><span class="pre">name:</span> <span class="pre">&quot;</span><em><span class="pre">NAME</span></em><span class="pre">&quot;</span> <span class="pre">versions:</span> <span class="pre">-</span> <em><span class="pre">VERSION₁</span></em> <span class="pre">-</span> <em><span class="pre">VERSION₂</span></em></code>
-</pre>
-<p>which should be part the <a class="reference internal" href="../../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a>. Note that multiple
-versions of a <a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">project</span></a> can be specified in one entry but
-multiple entry for the same <a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">project</span></a> are not allowed.</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code> » <code class="docutils literal notranslate"><span class="pre">name</span></code></p>
-<blockquote>
-<div>TODO</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code> » <code class="docutils literal notranslate"><span class="pre">match</span></code></p>
-<blockquote>
-<div><p>TODO</p>
-<p>Example:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">versions</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="nt">pattern</span><span class="p">:</span> <span class="s">&quot;^(([^-]+)-stable)$&quot;</span>
-  <span class="nt">variables</span><span class="p">:</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;${match:1}&quot;</span>
-    <span class="nt">numeric</span><span class="p">:</span> <span class="s">&quot;${match:2}&quot;</span>
-</pre></div>
 </div>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code> » <code class="docutils literal notranslate"><span class="pre">variables</span></code></p>
-<blockquote>
-<div>TODO</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code> » <code class="docutils literal notranslate"><span class="pre">include</span></code> » <code class="docutils literal notranslate"><span class="pre">distributions</span></code></p>
-<blockquote>
-<div><p>Like the global <code class="docutils literal notranslate"><span class="pre">include</span></code> » <code class="docutils literal notranslate"><span class="pre">distributions</span></code> field, but specific
-to a versions. The value can refer to the value of the global
-variable via <code class="docutils literal notranslate"><span class="pre">${next-value}</span></code>.</p>
-<p>TODO overwriting entries?</p>
-</div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">versions</span></code> » <code class="docutils literal notranslate"><span class="pre">include</span></code> » <code class="docutils literal notranslate"><span class="pre">projects</span></code></p>
-<blockquote>
-<div><p>Like the global <code class="docutils literal notranslate"><span class="pre">include</span></code> » <code class="docutils literal notranslate"><span class="pre">projects</span></code> field, but specific to a
-versions. The value can refer to the value of the global variable
-via <code class="docutils literal notranslate"><span class="pre">${next-value}</span></code>.</p>
-<p>TODO overwriting entries?</p>
-</div></blockquote>
 </div>
 
 

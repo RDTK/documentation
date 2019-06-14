@@ -88,11 +88,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced.html">Advanced</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../updating.html">Updating the RDTK Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/build-generator.html">build-generator</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Recipes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="recipes/project.html">Project Recipes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="recipes/distribution.html">Distribution Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="recipes/person.html">Person Recipes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="recipes/template.html">Templates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#variables-and-the-substitution-sub-language">Variables and the Substitution Sub-Language</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#variable-scopes">Variable Scopes</a></li>
@@ -103,6 +105,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../support.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 </ul>
 <ul>
@@ -182,23 +185,26 @@
 <p>Kinds of recipes:</p>
 <p><a class="reference internal" href="recipes/project.html#recipes-project"><span class="std std-ref">Project Recipes</span></a></p>
 <blockquote>
-<div>Descriptions of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a></div></blockquote>
+<div>Descriptions of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>.</div></blockquote>
 <p><a class="reference internal" href="recipes/distribution.html#recipes-distribution"><span class="std std-ref">Distribution Recipes</span></a></p>
 <blockquote>
 <div>Descriptions of <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> which are
 groups of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> versions that can be built and used
 together.</div></blockquote>
+<p><a class="reference internal" href="recipes/person.html#recipes-person"><span class="std std-ref">Person Recipes</span></a></p>
+<blockquote>
+<div>Information pertaining to persons involved in <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>, <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> or recipe writing.</div></blockquote>
 <p><a class="reference internal" href="recipes/template.html#recipes-template"><span class="std std-ref">Template Recipes</span></a></p>
 <blockquote>
 <div>Descriptions of common <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> kinds including how to build
 and install the respective kinds of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>
 depending on the overall development mode.</div></blockquote>
 <p>On the syntactic level, all descriptions are currently based on
-<a href="#id2"><span class="problematic" id="id3">`YAML`_</span></a>.</p>
+<a class="reference external" href="https://yaml.org/">YAML</a>.</p>
 <div class="section" id="variables-and-the-substitution-sub-language">
 <h2>Variables and the Substitution Sub-Language<a class="headerlink" href="#variables-and-the-substitution-sub-language" title="Permalink to this headline">¶</a></h2>
 <p>Objects such as <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>, <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> are basically named entities with a dictionary of
-variable names and their values. In <a href="#id4"><span class="problematic" id="id5">`JSON`_</span></a>, this translates into</p>
+variable names and their values. In <a class="reference external" href="https://json.org/">JSON</a>, this translates into</p>
 <pre class="literal-block">
 …
 

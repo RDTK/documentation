@@ -42,10 +42,12 @@ inclusion of 3rd-party elements and complex dependency structures.
    advanced
    updating
 
+   tools
    build-generator <tools/build-generator>
 
    reference
 
+   support
    faq
 
 .. toctree::
