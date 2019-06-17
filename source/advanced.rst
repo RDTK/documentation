@@ -1,7 +1,9 @@
 .. _advanced:
 
 Advanced
-=======================
+========
+
+.. _deployment-modes:
 
 Deployment Modes
 -----------------------
@@ -9,31 +11,34 @@ Deployment Modes
 Users can choose different deploy modes in |project|:
 
 toolkit
-    Describes a mode that can be used to generate build jobs which are
-    able to bootstrap a complete software distribution from scratch by
-    installing it to a shared filesystem prefix. Therefore, the Jenkins
-    jobs are orchestrated by a buildflow job which triggers the distinct
-    jobs per software project in the appropriate order. No polling of SCM
-    is performed in this mode and jobs have to be triggered manually via
-    the Jenkins interface.
+
+    Used to generate build jobs which bootstrap a complete software
+    distribution from scratch by installing it into a filesystem
+    location. The generated Jenkins_ jobs are triggered in the
+    appropriate order by an additional orchestration job -- no SCM
+    polling is performed in this mode.
 
 ci-deploy
-    This mode is used to continuously update a software distribution
-    installed in a shared prefix whenever an SCM change to a software
-    component appeared. This mode does not handle the bootstrapping phase
-    correctly as it starts building software projects whenever a change is
-    detected or an upstream project's build finished.
+
+    This mode is used to automatically update a software distribution
+    installed in a filesystem location after each SCM change to any of
+    the involved :term:`projects <project>`. An additional
+    orchestration job performs the initial build in an order that
+    respects dependencies between :term:`projects <project>`.
 
 ci
+
     Continuous integration mode for continuously building and testing
-    software without installing it to a distinct filesystem prefix.
-    Artifact copying is used between build job workspaces to handle
-    dependency resolution.
+    software without installing into a filesystem location. Artifacts
+    are copied between build job workspaces to handle dependencies
+    between :term:`projects <project>`.
 
 Makefile
+
     TODO
 
 Docker
+
     TODO
 
 Private Repository
