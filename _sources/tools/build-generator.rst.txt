@@ -40,29 +40,29 @@ Supported Commands
 
    build-generator-version
 
-*  :ref:`analyze <command-analyze>` -- Analyze project repositories w
+*  :ref:`analyze <command-analyze>` -- Analyze project repositories w.r.t. dependencies and meta-data.
 
-*  :ref:`config <command-config>` -- Describe configuration sources and the current configuration
+*  :ref:`config <command-config>` -- Describe configuration sources and the current configuration.
 
-*  :ref:`create-jenkins-user <command-create-jenkins-user>` -- Create a user account in a Jenkins instance
+*  :ref:`create-jenkins-user <command-create-jenkins-user>` -- Create a user account in a Jenkins instance.
 
-*  :ref:`generate <command-generate>` -- Generate Jenkins jobs for a given distribution
+*  :ref:`generate <command-generate>` -- Generate Jenkins jobs for a given distribution.
 
-*  :ref:`help <command-help>` -- Print help either for all commands or for a given command
+*  :ref:`help <command-help>` -- Print help either for all commands or for a given command.
 
-*  :ref:`info-aspects <command-info-aspects>` -- Print information about available aspects
+*  :ref:`info-aspects <command-info-aspects>` -- Print information about available aspects.
 
-*  :ref:`info-variables <command-info-variables>` -- Print information about recognized variables
+*  :ref:`info-variables <command-info-variables>` -- Print information about recognized variables.
 
-*  :ref:`install-jenkins <command-install-jenkins>` -- Install and configure a Jenkins CI server
+*  :ref:`install-jenkins <command-install-jenkins>` -- Install and configure a Jenkins CI server.
 
-*  :ref:`platform-requirements <command-platform-requirements>` -- Analyze system packages required on a given platform
+*  :ref:`platform-requirements <command-platform-requirements>` -- Analyze system packages required on a given platform.
 
-*  :ref:`report <command-report>` -- Generate one or more reports for given distribution(s)
+*  :ref:`report <command-report>` -- Generate one or more reports for given distribution(s).
 
-*  :ref:`validate <command-validate>` -- Perform basic sanity checks for a given recipe repository
+*  :ref:`validate <command-validate>` -- Perform basic sanity checks for a given recipe repository.
 
-*  :ref:`version <command-version>` -- Print the version of this program and some components
+*  :ref:`version <command-version>` -- Print the version of this program and some components.
 
 
 
