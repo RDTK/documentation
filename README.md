@@ -1,6 +1,6 @@
 ## Automated Builds
 
-Available at: TODO
+Available at: https://rdtk.github.io/documentation/index.html
 
 ## Manual
 
