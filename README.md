@@ -1,8 +1,8 @@
-## Automated Builds 
+## Automated Builds
 
 Available at: TODO
 
-## Manual 
+## Manual
 
 ### Build
 
@@ -20,3 +20,10 @@ From master branch run:
 <pre>
   make gh-pages
 </pre>
+
+## Acknowledgments
+
+The development of this software has been supported as follows:
+
+- The development of this software was supported by CoR-Lab, Research Institute for Cognition and Robotics Bielefeld University.
+- This work was supported by the Cluster of Excellence Cognitive Interaction Technology ‘CITEC’ (EXC 277) at Bielefeld University, which is funded by the German Research Foundation (DFG).
