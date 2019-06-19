@@ -185,34 +185,36 @@
 <p>Kinds of recipes:</p>
 <p><a class="reference internal" href="recipes/project.html#recipes-project"><span class="std std-ref">Project Recipes</span></a></p>
 <blockquote>
-<div>Descriptions of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>.</div></blockquote>
+<div><p>Descriptions of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>.</p>
+</div></blockquote>
 <p><a class="reference internal" href="recipes/distribution.html#recipes-distribution"><span class="std std-ref">Distribution Recipes</span></a></p>
 <blockquote>
-<div>Descriptions of <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> which are
+<div><p>Descriptions of <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> which are
 groups of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> versions that can be built and used
-together.</div></blockquote>
+together.</p>
+</div></blockquote>
 <p><a class="reference internal" href="recipes/person.html#recipes-person"><span class="std std-ref">Person Recipes</span></a></p>
 <blockquote>
-<div>Information pertaining to persons involved in <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>, <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> or recipe writing.</div></blockquote>
+<div><p>Information pertaining to persons involved in <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>, <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> or recipe writing.</p>
+</div></blockquote>
 <p><a class="reference internal" href="recipes/template.html#recipes-template"><span class="std std-ref">Template Recipes</span></a></p>
 <blockquote>
-<div>Descriptions of common <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> kinds including how to build
+<div><p>Descriptions of common <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> kinds including how to build
 and install the respective kinds of <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>
-depending on the overall development mode.</div></blockquote>
+depending on the overall development mode.</p>
+</div></blockquote>
 <p>On the syntactic level, all descriptions are currently based on
 <a class="reference external" href="https://yaml.org/">YAML</a>.</p>
 <div class="section" id="variables-and-the-substitution-sub-language">
 <h2>Variables and the Substitution Sub-Language<a class="headerlink" href="#variables-and-the-substitution-sub-language" title="Permalink to this headline">¶</a></h2>
 <p>Objects such as <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">projects</span></a>, <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distributions</span></a> are basically named entities with a dictionary of
 variable names and their values. In <a class="reference external" href="https://json.org/">JSON</a>, this translates into</p>
-<pre class="literal-block">
-…
+<pre class="literal-block">…
 
 variables:
   <code class="samp docutils literal notranslate"><span class="pre">&quot;</span><em><span class="pre">NAME₁</span></em><span class="pre">&quot;</span></code>: <code class="samp docutils literal notranslate"><em><span class="pre">VALUE₁</span></em></code>
   <code class="samp docutils literal notranslate"><span class="pre">&quot;</span><em><span class="pre">NAME₂</span></em><span class="pre">&quot;</span></code>: <code class="samp docutils literal notranslate"><em><span class="pre">VALUE₂</span></em></code>
-  …
-</pre>
+  …</pre>
 <p>The value part of a variable definition is either a string or a list
 of values. A small substitution sub-language, syntactically similar to
 “parameter expansion” in UNIX shells, can be used to refer to values
@@ -230,7 +232,7 @@ substitution, which act differently on strings and lists.</p>
 </div>
 <p>The basic syntax is as follows:</p>
 <ul>
-<li><p class="first">Scalar substitution</p>
+<li><p>Scalar substitution</p>
 <p><code class="samp docutils literal notranslate"><span class="pre">$</span><em><span class="pre">{NAME</span></em><span class="pre">}</span></code></p>
 <blockquote>
 <div><p>Expands to the value of the variable named <code class="samp docutils literal notranslate"><em><span class="pre">NAME</span></em></code>.</p>
@@ -250,7 +252,7 @@ scope if there is such a value and <code class="samp docutils literal notranslat
 before, <code class="samp docutils literal notranslate"><em><span class="pre">DEFAULT</span></em></code> can be empty or omitted entirely.</p>
 </div></blockquote>
 </li>
-<li><p class="first">List substitution</p>
+<li><p>List substitution</p>
 <p>Concatenates the elements of a list into a single string if there is
 surrounding text. Otherwise, i.e. if there is no surrounding text,
 it evaluates to the first element of the list. Obviously, this only
@@ -283,11 +285,11 @@ scope if there is such a value and the empty list (<code class="docutils literal
 otherwise. As before, <code class="docutils literal notranslate"><span class="pre">[]</span></code> can be omitted.</p>
 </div></blockquote>
 </li>
-<li><p class="first">Products</p>
+<li><p>Products</p>
 <p>If the evaluation of a variable results in a list, this list is
 “multiplied” with the rest of the value string.</p>
 </li>
-<li><p class="first">Examples</p>
+<li><p>Examples</p>
 <p>Assuming the following variables are defined (repeated from above):</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">list.a</span><span class="p">:</span>  <span class="p p-Indicator">[</span> <span class="s">&quot;abc&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;def&quot;</span> <span class="p p-Indicator">]</span>
 <span class="nt">list.b</span><span class="p">:</span>  <span class="p p-Indicator">[</span> <span class="s">&quot;123&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;456&quot;</span> <span class="p p-Indicator">]</span>
@@ -353,21 +355,23 @@ can be configured.</p>
 important:</p>
 <p><code class="docutils literal notranslate"><span class="pre">variables</span></code> » <code class="docutils literal notranslate"><span class="pre">access</span></code></p>
 <blockquote>
-<div>Specifies access restrictions of the <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> or
+<div><p>Specifies access restrictions of the <a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">project</span></a> or
 <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a>. If present, has to have one of the values
 <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>. Omitting the variable is equivalent to
-<code class="docutils literal notranslate"><span class="pre">public</span></code>.</div></blockquote>
+<code class="docutils literal notranslate"><span class="pre">public</span></code>.</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">variables</span></code> » <code class="docutils literal notranslate"><span class="pre">scm.credentials</span></code></p>
 <blockquote>
-<div>The value of this variable names an entry in Jenkins’ global
+<div><p>The value of this variable names an entry in Jenkins’ global
 credentials store that should be associated to the repository of
-this project in generated Jenkins jobs.</div></blockquote>
+this project in generated Jenkins jobs.</p>
+</div></blockquote>
 <p>The following rules apply:</p>
 <ul class="simple">
-<li><a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">Projects</span></a> with <code class="docutils literal notranslate"><span class="pre">scm.credentials</span></code> entries must
-specify <code class="docutils literal notranslate"><span class="pre">private</span></code> <code class="docutils literal notranslate"><span class="pre">access</span></code>.</li>
-<li><a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">Distributions</span></a> with one or more <code class="docutils literal notranslate"><span class="pre">private</span></code>
-projects must specify <code class="docutils literal notranslate"><span class="pre">private</span></code> <code class="docutils literal notranslate"><span class="pre">access</span></code>.</li>
+<li><p><a class="reference internal" href="../glossary.html#term-project"><span class="xref std std-term">Projects</span></a> with <code class="docutils literal notranslate"><span class="pre">scm.credentials</span></code> entries must
+specify <code class="docutils literal notranslate"><span class="pre">private</span></code> <code class="docutils literal notranslate"><span class="pre">access</span></code>.</p></li>
+<li><p><a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">Distributions</span></a> with one or more <code class="docutils literal notranslate"><span class="pre">private</span></code>
+projects must specify <code class="docutils literal notranslate"><span class="pre">private</span></code> <code class="docutils literal notranslate"><span class="pre">access</span></code>.</p></li>
 </ul>
 </div>
 </div>

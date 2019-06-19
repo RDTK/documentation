@@ -222,35 +222,35 @@
 <p>Generate Jenkins jobs for a given distribution.</p>
 <dl class="option">
 <dt id="cmdoption-generate-api-token">
-<code class="descname">--api-token</code><code class="descclassname">=API-TOKEN</code><a class="headerlink" href="#cmdoption-generate-api-token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--api-token</code><code class="sig-prename descclassname">=API-TOKEN</code><a class="headerlink" href="#cmdoption-generate-api-token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>API token for Jenkins authentication.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-generate-password">
-<code class="descname">--password</code><code class="descclassname">=PASSWORD</code><a class="headerlink" href="#cmdoption-generate-password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--password</code><code class="sig-prename descclassname">=PASSWORD</code><a class="headerlink" href="#cmdoption-generate-password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Password for Jenkins authentication.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-generate-username">
-<code class="descname">--username</code><code class="descclassname">=LOGIN</code><a class="headerlink" href="#cmdoption-generate-username" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--username</code><code class="sig-prename descclassname">=LOGIN</code><a class="headerlink" href="#cmdoption-generate-username" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Username for Jenkins authentication.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-generate-base-uri">
-<code class="descname">--base-uri</code><code class="descclassname">=URI</code><a class="headerlink" href="#cmdoption-generate-base-uri" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--base-uri</code><code class="sig-prename descclassname">=URI</code><a class="headerlink" href="#cmdoption-generate-base-uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">URI</span></code> Default: <code class="docutils literal notranslate"><span class="pre">https://localhost:8080/</span></code></p>
 <p>Jenkins base <code class="docutils literal notranslate"><span class="pre">URI</span></code> .</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-generate-delete-other-pattern">
-<code class="descname">--delete-other-pattern</code><code class="descclassname">=REGEX</code><a class="headerlink" href="#cmdoption-generate-delete-other-pattern" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--delete-other-pattern</code><code class="sig-prename descclassname">=REGEX</code><a class="headerlink" href="#cmdoption-generate-delete-other-pattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>When deleting previously automatically generated jobs, only consider jobs
 whose name matches the regular expression <code class="docutils literal notranslate"><span class="pre">REGEX</span></code> .</p>
@@ -261,7 +261,7 @@ the regular expression <code class="docutils literal notranslate"><span class="p
 
 <dl class="option">
 <dt id="cmdoption-generate-delete-other">
-<code class="descname">--delete-other</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-generate-delete-other" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--delete-other</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-generate-delete-other" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Delete previously automatically generated jobs when they are not re-created
 in this generation run.</p>
@@ -269,7 +269,7 @@ in this generation run.</p>
 
 <dl class="option">
 <dt id="cmdoption-generate-set">
-<code class="descname">--set</code><code class="descclassname">=VARIABLE-NAME=VALUE</code><a class="headerlink" href="#cmdoption-generate-set" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--set</code><code class="sig-prename descclassname">=VARIABLE-NAME=VALUE</code><a class="headerlink" href="#cmdoption-generate-set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">VARIABLE-ASSIGNMENT)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Overwrite a variable after loading the distribution.</p>
 <p>Arguments to this option have to be of the form <code class="docutils literal notranslate"><span class="pre">VARIABLE-NAME=VALUE</span></code> .</p>
@@ -278,7 +278,7 @@ in this generation run.</p>
 
 <dl class="option">
 <dt id="cmdoption-generate-mode">
-<code class="descname">--mode</code><code class="descclassname">=MODE</code><a class="headerlink" href="#cmdoption-generate-mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--mode</code><code class="sig-prename descclassname">=MODE</code><a class="headerlink" href="#cmdoption-generate-mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">STRING</span></code> Default: <code class="docutils literal notranslate"><span class="pre">toolkit</span></code></p>
 <p>The mode according to which jobs should be generated.</p>
 <p>Selects the set of templates stored in the templates/MODE directory.</p>
@@ -286,7 +286,7 @@ in this generation run.</p>
 
 <dl class="option">
 <dt id="cmdoption-generate-arg-distribution-name">
-<code class="descname">DISTRIBUTION-NAME*</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-generate-arg-distribution-name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DISTRIBUTION-NAME*</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-generate-arg-distribution-name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Distribution recipes(s) which should be processed.</p>
 <p>This option can be supplied multiple times.</p>

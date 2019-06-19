@@ -163,39 +163,38 @@
   
   <div class="section" id="glossary">
 <span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
-<dl class="glossary docutils">
-<dt id="term-template">template</dt>
-<dd>Describes <a class="reference internal" href="#term-aspect"><span class="xref std std-term">aspects</span></a> and configuration defaults of
+<dl class="glossary">
+<dt id="term-template">template</dt><dd><p>Describes <a class="reference internal" href="#term-aspect"><span class="xref std std-term">aspects</span></a> and configuration defaults of
 a given <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a>. For example, a template
 could describe how a <a class="reference external" href="https://cmake.org/">CMake</a>-based C++ project can be built,
-tested and installed.</dd>
-<dt id="term-distribution">distribution</dt>
-<dd>A collection of particular versions of <a class="reference internal" href="#term-project"><span class="xref std std-term">projects</span></a>
-that can be built, tested and installed together.</dd>
-<dt id="term-project">project</dt>
-<dd><p class="first">A software project that is processed by the RDTK
+tested and installed.</p>
+</dd>
+<dt id="term-distribution">distribution</dt><dd><p>A collection of particular versions of <a class="reference internal" href="#term-project"><span class="xref std std-term">projects</span></a>
+that can be built, tested and installed together.</p>
+</dd>
+<dt id="term-project">project</dt><dd><p>A software project that is processed by the RDTK
 system. Conceptually consists of a repository from which the
 source code of the project can be obtained, a <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a> that
 indicates how the project can be processed and a set of
 versions.</p>
-<p class="last">The above description is not completely accurate because versions
+<p>The above description is not completely accurate because versions
 can differ w.r.t. repository and <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a>.</p>
 </dd>
-<dt id="term-recipe">recipe</dt>
-<dd>A file describing of a <a class="reference internal" href="#term-distribution"><span class="xref std std-term">distribution</span></a> or <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a>.</dd>
-<dt id="term-nature">nature</dt>
-<dd>The nature of a <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> is determined by the build
+<dt id="term-recipe">recipe</dt><dd><p>A file describing of a <a class="reference internal" href="#term-distribution"><span class="xref std std-term">distribution</span></a> or <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a>.</p>
+</dd>
+<dt id="term-nature">nature</dt><dd><p>The nature of a <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> is determined by the build
 system, programming language, etc. Examples include
 <a class="reference external" href="https://cmake.org/">CMake</a>-based project, <a class="reference external" href="https://www.ros.org/">ROS</a> package or <a class="reference external" href="https://common-lisp.net/project/asdf/">ASDF</a> system. From
 the perspective of RDTK, the nature indicates how a
-<a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> has to be analyzed, built, tested and installed.</dd>
-<dt id="term-aspect">aspect</dt>
-<dd>Are instantiated in <a class="reference internal" href="#term-template"><span class="xref std std-term">templates</span></a> and each
+<a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> has to be analyzed, built, tested and installed.</p>
+</dd>
+<dt id="term-aspect">aspect</dt><dd><p>Are instantiated in <a class="reference internal" href="#term-template"><span class="xref std std-term">templates</span></a> and each
 describe one, well aspect, of how to build, test or install or
 otherwise work with projects of a given <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a>. In
 particular, aspects often manage one piece of <a class="reference external" href="https://jenkins.io">Jenkins</a>
 configuration that should be generated for a <a class="reference internal" href="#term-project"><span class="xref std std-term">project</span></a> of a
-certain <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a>.</dd>
+certain <a class="reference internal" href="#term-nature"><span class="xref std std-term">nature</span></a>.</p>
+</dd>
 </dl>
 </div>
 

@@ -192,32 +192,36 @@ distinct directory structures. The different directories are described
 in the following:</p>
 <p><code class="file docutils literal notranslate"><span class="pre">_common</span></code></p>
 <blockquote>
-<div>Contains templates that are shared by all distinct modes. This
+<div><p>Contains templates that are shared by all distinct modes. This
 directory cannot be used as a generator mode. In case a specific
 mode uses a template from this directory, it is symlinked into that
-mode’s directory.</div></blockquote>
+mode’s directory.</p>
+</div></blockquote>
 <p><code class="file docutils literal notranslate"><span class="pre">toolkit</span></code></p>
 <blockquote>
-<div>Describes a mode that can be used to generate build jobs which are
+<div><p>Describes a mode that can be used to generate build jobs which are
 able to bootstrap a complete software distribution from scratch by
 installing it to a shared filesystem prefix.  Therefore, the Jenkins
 jobs are orchestrated by a buildflow job which triggers the distinct
 jobs per software project in the appropriate order. No polling of
 SCM is performed in this mode and jobs have to be triggered manually
-via the Jenkins interface.</div></blockquote>
+via the Jenkins interface.</p>
+</div></blockquote>
 <p><code class="file docutils literal notranslate"><span class="pre">ci-deploy</span></code></p>
 <blockquote>
-<div>This mode is used to continuously update a software distribution
+<div><p>This mode is used to continuously update a software distribution
 installed in a shared prefix whenever an SCM change to a software
 component appeared. This mode does not handle the bootstrapping
 phase correctly as it starts building software projects whenever a
-change is detected or an upstream project’s build finished.</div></blockquote>
+change is detected or an upstream project’s build finished.</p>
+</div></blockquote>
 <p><code class="file docutils literal notranslate"><span class="pre">ci</span></code></p>
 <blockquote>
-<div>Continuous integration mode for continuously building and testing
+<div><p>Continuous integration mode for continuously building and testing
 software without installing it to a distinct filesystem prefix.
 Artifact copying is used between build job workspaces to handle
-dependency resolution.</div></blockquote>
+dependency resolution.</p>
+</div></blockquote>
 <div class="section" id="template-syntax">
 <h2>Template Syntax<a class="headerlink" href="#template-syntax" title="Permalink to this headline">¶</a></h2>
 <p>A typical template description looks as follows</p>
@@ -274,27 +278,33 @@ dependency resolution.</div></blockquote>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">variables</span></code></p>
 <blockquote>
-<div>Variables specific to this template.</div></blockquote>
+<div><p>Variables specific to this template.</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">variables</span></code> » <code class="docutils literal notranslate"><span class="pre">kind</span></code></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&quot;project&quot;</span></code></p>
 <blockquote>
-<div>“normal” project job</div></blockquote>
+<div><p>“normal” project job</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&quot;matrix&quot;</span></code></p>
 <blockquote>
-<div>matrix job</div></blockquote>
+<div><p>matrix job</p>
+</div></blockquote>
 <p><code class="samp docutils literal notranslate"><span class="pre">[</span> <span class="pre">&quot;</span><em><span class="pre">ELEMENT-NAME</span></em><span class="pre">&quot;,</span> <span class="pre">&quot;</span><em><span class="pre">PLUGIN-NAME&#64;PLUGIN-VERSION</span></em><span class="pre">&quot;</span> <span class="pre">]</span></code></p>
 <blockquote>
-<div>arbitrary kind</div></blockquote>
+<div><p>arbitrary kind</p>
+</div></blockquote>
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">aspects</span></code></p>
 <blockquote>
-<div><a class="reference internal" href="../../glossary.html#term-aspect"><span class="xref std std-term">Aspects</span></a> are specific configuration fragments to
-include in the generated Jenkins jobs.</div></blockquote>
+<div><p><a class="reference internal" href="../../glossary.html#term-aspect"><span class="xref std std-term">Aspects</span></a> are specific configuration fragments to
+include in the generated Jenkins jobs.</p>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">jobs</span></code></p>
 <blockquote>
-<div>The kind of Jenkins jobs to generate for projects that have this
-template assigned.</div></blockquote>
+<div><p>The kind of Jenkins jobs to generate for projects that have this
+template assigned.</p>
+</div></blockquote>
 </div>
 </div>
 

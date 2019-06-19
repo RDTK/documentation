@@ -178,45 +178,45 @@
 <div class="section" id="deployment-modes">
 <h2>Deployment Modes<a class="headerlink" href="#deployment-modes" title="Permalink to this headline">¶</a></h2>
 <p>Users can choose different deploy modes in RDTK:</p>
-<dl class="docutils">
-<dt>toolkit</dt>
-<dd>Describes a mode that can be used to generate build jobs which are
+<dl class="simple">
+<dt>toolkit</dt><dd><p>Describes a mode that can be used to generate build jobs which are
 able to bootstrap a complete software distribution from scratch by
 installing it to a shared filesystem prefix. Therefore, the Jenkins
 jobs are orchestrated by a buildflow job which triggers the distinct
 jobs per software project in the appropriate order. No polling of SCM
 is performed in this mode and jobs have to be triggered manually via
-the Jenkins interface.</dd>
-<dt>ci-deploy</dt>
-<dd>This mode is used to continuously update a software distribution
+the Jenkins interface.</p>
+</dd>
+<dt>ci-deploy</dt><dd><p>This mode is used to continuously update a software distribution
 installed in a shared prefix whenever an SCM change to a software
 component appeared. This mode does not handle the bootstrapping phase
 correctly as it starts building software projects whenever a change is
-detected or an upstream project’s build finished.</dd>
-<dt>ci</dt>
-<dd>Continuous integration mode for continuously building and testing
+detected or an upstream project’s build finished.</p>
+</dd>
+<dt>ci</dt><dd><p>Continuous integration mode for continuously building and testing
 software without installing it to a distinct filesystem prefix.
 Artifact copying is used between build job workspaces to handle
-dependency resolution.</dd>
-<dt>Makefile</dt>
-<dd>TODO</dd>
-<dt>Docker</dt>
-<dd>TODO</dd>
+dependency resolution.</p>
+</dd>
+<dt>Makefile</dt><dd><p>TODO</p>
+</dd>
+<dt>Docker</dt><dd><p>TODO</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="private-repository">
 <h2>Private Repository<a class="headerlink" href="#private-repository" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>The best way to access private git repositories is accessing them with ssh keys. To enable ssh access for git repositories the project URL scheme has to be <code class="docutils literal notranslate"><span class="pre">git+ssh</span></code>.</p>
-<p class="last">Example for GitHub projects: <code class="samp docutils literal notranslate"><span class="pre">git+ssh://github.com/</span><em><span class="pre">USER</span></em><span class="pre">/</span><em><span class="pre">PROJECT</span></em><span class="pre">.git</span></code></p>
+<p>Example for GitHub projects: <code class="samp docutils literal notranslate"><span class="pre">git+ssh://github.com/</span><em><span class="pre">USER</span></em><span class="pre">/</span><em><span class="pre">PROJECT</span></em><span class="pre">.git</span></code></p>
 </div>
 <div class="section" id="password-based-access">
 <h3>Password based access<a class="headerlink" href="#password-based-access" title="Permalink to this headline">¶</a></h3>
 <p>In cases where access to a repository only possible with password restricted access, <strong class="program">build-generator</strong> and Jenkins need to know the login credentials.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you are using GitHub for example, you can generate an <a class="reference external" href="https://github.com/settings/tokens">access token</a> with read-only access to your repository by ticking <code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">-&gt;</span> <span class="pre">public_repo</span></code> and then use this token as password along with your GitHub login name.</p>
+<p class="admonition-title">Note</p>
+<p>If you are using GitHub for example, you can generate an <a class="reference external" href="https://github.com/settings/tokens">access token</a> with read-only access to your repository by ticking <code class="docutils literal notranslate"><span class="pre">repo</span> <span class="pre">-&gt;</span> <span class="pre">public_repo</span></code> and then use this token as password along with your GitHub login name.</p>
 </div>
 <p><strong class="program">build-generator</strong> requires you to store your credentials <strong>unecrypted</strong> in a file called <code class="file docutils literal notranslate"><span class="pre">~/.netrc</span></code>, using the following syntax for every remote machine your distribution is referencing:</p>
 <div class="highlight-perl notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="n">projects</span><span class="o">.</span><span class="n">cit</span><span class="o">-</span><span class="n">ec</span><span class="o">.</span><span class="n">uni</span><span class="o">-</span><span class="n">bielefeld</span><span class="o">.</span><span class="n">de</span>
@@ -228,11 +228,9 @@ dependency resolution.</dd>
 <div class="section" id="jenkins-credentials-store">
 <h3>Jenkins credentials store<a class="headerlink" href="#jenkins-credentials-store" title="Permalink to this headline">¶</a></h3>
 <p>After generating a distribution with private access projects, <strong class="program">build-generator</strong> shows the required credentials:</p>
-<pre class="literal-block">
-The following credentials have been referenced and have to be configured in Jenkins' credential store:
+<pre class="literal-block">The following credentials have been referenced and have to be configured in Jenkins' credential store:
 * &quot;<code class="samp docutils literal notranslate"><em><span class="pre">CREDENTIAL_ID</span></em></code>&quot; for jobs ...
-* &quot;<code class="samp docutils literal notranslate"><em><span class="pre">CREDENTIAL_ID</span></em></code>&quot; for job ...
-</pre>
+* &quot;<code class="samp docutils literal notranslate"><em><span class="pre">CREDENTIAL_ID</span></em></code>&quot; for job ...</pre>
 <p>The given <code class="samp docutils literal notranslate"><em><span class="pre">CREDENTIAL_ID</span></em><span class="pre">s</span></code> need to be added to the Jenkins credential store <a class="reference external" href="https://jenkins.io/doc/book/using/using-credentials/">jenkins_credentials</a>.</p>
 </div>
 </div>
