@@ -180,8 +180,7 @@
 plan to deploy a ‘production’ system, please also consider the reading <a class="reference internal" href="../advanced.html#advanced"><span class="std std-ref">Advanced</span></a> configuration.</p>
 <p>Now, in order to get started, you will need to install the following dependencies to run RDTK tools.
 Open a terminal and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev <span class="se">\</span>
-python-setuptools git subversion maven build-essential cmake
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install curl git
 </pre></div>
 </div>
 <p>In general, you can install the RDTK in any location (prefix). However, in order
@@ -199,13 +198,17 @@ to your <code class="file docutils literal notranslate"><span class="pre">$HOME/
 <a class="reference external" href="https://github.com/RDTK/generator/releases/latest">https://github.com/RDTK/generator/releases/latest</a>. Change-dir to the
 download folder of the <strong class="program">build-generator</strong> binary (replace
 <code class="samp docutils literal notranslate"><em><span class="pre">VERSION</span></em></code>) …</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod u+x build-generator-VERSION-x86_64-linux
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install --no-install-recommends openjdk-8-jdk
+chmod u+x build-generator-VERSION-x86_64-linux
 mv build-generator-VERSION-x86_64-linux <span class="nv">$RDTK_ROOT</span>
 <span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
 ln -s build-generator-VERSION-x86_64-linux build-generator
 <span class="c1"># Change USER_NAME_CHANGE_ME &amp; PW_CHANGE_ME &amp; name@foo.com (email)</span>
-./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p <span class="se">\</span>
-PW_CHANGE_ME -e name@foo.com install-test
+./build-generator install-jenkins <span class="se">\</span>
+    -u USER_NAME_CHANGE_ME        <span class="se">\</span>
+    -p PW_CHANGE_ME               <span class="se">\</span>
+    -e name@foo.com               <span class="se">\</span>
+    install-test
 <span class="c1"># This might take between 60 and 300 seconds</span>
 <span class="nb">cd</span> install-test
 ./start_jenkins
@@ -241,8 +244,9 @@ ls
 <p>As an example we will generate all build jobs for the <code class="docutils literal notranslate"><span class="pre">build-generator-nightly.distribution</span></code>
 <a class="reference external" href="https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution">(source)</a> and the required platform dependencies.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
-./build-generator platform-requirements --platform ubuntu <span class="se">\</span>
-citk/distributions/build-generator-nightly.distribution
+./build-generator platform-requirements <span class="se">\</span>
+    --platform ubuntu                   <span class="se">\</span>
+    citk/distributions/build-generator-nightly.distribution
 <span class="c1"># Exemplary generator output:</span>
 <span class="c1"># Found 12 platform requirements for ubuntu:</span>
 <span class="c1"># curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev</span>
@@ -255,9 +259,12 @@ citk/distributions/build-generator-nightly.distribution
 <p>Subsequently, the build jobs for the <a class="reference internal" href="../glossary.html#term-distribution"><span class="xref std std-term">distribution</span></a> can be
 generated and deployed to <a class="reference external" href="https://jenkins.io">Jenkins</a>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nv">$RDTK_ROOT</span>
-./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME <span class="se">\</span>
--D <span class="s1">&#39;view.create?=true&#39;</span> -D view.name<span class="o">=</span><span class="s1">&#39;Bootstrapping Tutorial&#39;</span> <span class="se">\</span>
-citk/distributions/build-generator-nightly.distribution
+./build-generator generate                <span class="se">\</span>
+    -u USER_NAME_CHANGE_ME                <span class="se">\</span>
+    -p PW_CHANGE_ME                       <span class="se">\</span>
+    -D <span class="s1">&#39;view.create?=true&#39;</span>                <span class="se">\</span>
+    -D view.name<span class="o">=</span><span class="s1">&#39;Bootstrapping Tutorial&#39;</span> <span class="se">\</span>
+    citk/distributions/build-generator-nightly.distribution
 </pre></div>
 </div>
 <p>If you reload <a class="reference external" href="https://localhost:8080">https://localhost:8080</a> you should see newly generated
