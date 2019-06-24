@@ -9,8 +9,7 @@ Open a terminal and run:
 
 .. code-block:: bash
 
-    sudo apt-get install openjdk-8-jdk curl python2.7 python2.7-dev \
-    python-setuptools git subversion maven build-essential cmake
+    sudo apt-get install curl git
 
 In general, you can install the |project| in any location (prefix). However, in order
 to establish a common configuration for the tutorials we declare:
@@ -35,13 +34,17 @@ download folder of the :program:`build-generator` binary (replace
 
 .. code-block:: bash
 
+   sudo apt-get install --no-install-recommends openjdk-8-jdk 
    chmod u+x build-generator-VERSION-x86_64-linux
    mv build-generator-VERSION-x86_64-linux $RDTK_ROOT
    cd $RDTK_ROOT
    ln -s build-generator-VERSION-x86_64-linux build-generator
    # Change USER_NAME_CHANGE_ME & PW_CHANGE_ME & name@foo.com (email)
-   ./build-generator install-jenkins -u USER_NAME_CHANGE_ME -p \
-   PW_CHANGE_ME -e name@foo.com install-test
+   ./build-generator install-jenkins \
+       -u USER_NAME_CHANGE_ME        \
+       -p PW_CHANGE_ME               \
+       -e name@foo.com               \
+       install-test
    # This might take between 60 and 300 seconds
    cd install-test
    ./start_jenkins
@@ -89,8 +92,9 @@ As an example we will generate all build jobs for the ``build-generator-nightly.
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   ./build-generator platform-requirements --platform ubuntu \
-   citk/distributions/build-generator-nightly.distribution
+   ./build-generator platform-requirements \
+       --platform ubuntu                   \
+       citk/distributions/build-generator-nightly.distribution
    # Exemplary generator output:
    # Found 12 platform requirements for ubuntu:
    # curl file gcc git libssl1.0.0 make sbcl tar time unp unzip zlib1g-dev
@@ -107,9 +111,12 @@ generated and deployed to Jenkins_:
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   ./build-generator generate -u USER_NAME_CHANGE_ME -p PW_CHANGE_ME \
-   -D 'view.create?=true' -D view.name='Bootstrapping Tutorial' \
-   citk/distributions/build-generator-nightly.distribution
+   ./build-generator generate                \
+       -u USER_NAME_CHANGE_ME                \
+       -p PW_CHANGE_ME                       \
+       -D 'view.create?=true'                \
+       -D view.name='Bootstrapping Tutorial' \
+       citk/distributions/build-generator-nightly.distribution
 
 
 If you reload https://localhost:8080 you should see newly generated
