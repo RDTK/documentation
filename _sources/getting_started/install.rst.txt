@@ -41,8 +41,8 @@ download folder of the :program:`build-generator` binary (replace
    ln -s build-generator-VERSION-x86_64-linux build-generator
    # Change USER_NAME_CHANGE_ME & PW_CHANGE_ME & name@foo.com (email)
    ./build-generator install-jenkins \
-       -u USER_NAME_CHANGE_ME        \
-       -p PW_CHANGE_ME               \
+       -u "USER_NAME_CHANGE_ME"      \
+       -p "PW_CHANGE_ME"             \
        -e name@foo.com               \
        install-test
    # This might take between 60 and 300 seconds

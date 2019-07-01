@@ -205,8 +205,8 @@ mv build-generator-VERSION-x86_64-linux <span class="nv">$RDTK_ROOT</span>
 ln -s build-generator-VERSION-x86_64-linux build-generator
 <span class="c1"># Change USER_NAME_CHANGE_ME &amp; PW_CHANGE_ME &amp; name@foo.com (email)</span>
 ./build-generator install-jenkins <span class="se">\</span>
-    -u USER_NAME_CHANGE_ME        <span class="se">\</span>
-    -p PW_CHANGE_ME               <span class="se">\</span>
+    -u <span class="s2">&quot;USER_NAME_CHANGE_ME&quot;</span>      <span class="se">\</span>
+    -p <span class="s2">&quot;PW_CHANGE_ME&quot;</span>             <span class="se">\</span>
     -e name@foo.com               <span class="se">\</span>
     install-test
 <span class="c1"># This might take between 60 and 300 seconds</span>
