@@ -18,8 +18,8 @@ directory with the following content, replacing :samp:`{URL}` and
     variables:
       repository: URL
 
-    branches:
-    - master
+      branches:
+      - master
 
 The :samp:`{BUILDTYPE}` :term:`template` depends on your project
 :term:`nature`.
@@ -100,7 +100,7 @@ directory with the following content, replacing :samp:`{USER}` and
       github.user: USER
       github.project: PROJECT
 
-    branches:
-    - master
+      branches:
+      - master
 
 .. _here: todo
