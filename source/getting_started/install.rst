@@ -44,9 +44,9 @@ download folder of the :program:`build-generator` binary (replace
        -u "USER_NAME_CHANGE_ME"      \
        -p "PW_CHANGE_ME"             \
        -e name@foo.com               \
-       install-test
+       jenkins
    # This might take between 60 and 300 seconds
-   cd install-test
+   cd jenkins
    ./start_jenkins
 
 Now open your browser and visit: https://localhost:8080 use username and password to login.
