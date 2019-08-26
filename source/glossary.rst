@@ -31,7 +31,8 @@
 
    recipe
 
-     A file describing of a :term:`distribution` or :term:`project`.
+     A text file describing a :term:`distribution`, :term:`project`,
+     person, etc.
 
    nature
 
