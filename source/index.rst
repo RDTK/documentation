@@ -40,17 +40,12 @@ inclusion of 3rd-party elements and complex dependency structures.
    vision_concept
    getting_started
    advanced
-   updating
 
-   tools
    build-generator <tools/build-generator>
 
    reference
 
    support
    faq
-
-.. toctree::
-   :hidden:
 
    glossary
