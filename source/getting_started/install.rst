@@ -17,7 +17,7 @@ to establish a common configuration for the tutorials we declare:
 .. code-block:: bash
 
    export RDTK_ROOT=$HOME/RDTK
-   mkdir -p $RDTK_ROOT   
+   mkdir -p $RDTK_ROOT
 
 Also, please note if you open new shells/terminals in this tutorial, remember to export
 ``export RDTK_ROOT=$HOME/RDTK`` in the new shell. Alternatively, add ``export RDTK_ROOT=$HOME/RDTK``
@@ -34,7 +34,7 @@ download folder of the :program:`build-generator` binary (replace
 
 .. code-block:: bash
 
-   sudo apt-get install --no-install-recommends openjdk-8-jdk 
+   sudo apt-get install --no-install-recommends openjdk-8-jdk
    chmod u+x build-generator-VERSION-x86_64-linux
    mv build-generator-VERSION-x86_64-linux $RDTK_ROOT
    cd $RDTK_ROOT
@@ -134,5 +134,5 @@ icon.
       toolkit.volume: /tmp/
       toolkit.dir: ${toolkit.volume}/${distribution-name}
 
-   In the scope of this tutorial you can find the result of the build in
+   In the scope of this tutorial you can find the result of the build
    in :file:`/tmp/build-generator-nightly`.
