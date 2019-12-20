@@ -23,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -172,33 +172,39 @@
   <div class="section" id="advanced">
 <span id="id1"></span><h1>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="deployment-modes">
-<h2>Deployment Modes<a class="headerlink" href="#deployment-modes" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Deployment Modes<a class="headerlink" href="#deployment-modes" title="Permalink to this headline">¶</a></h2>
 <p>Users can choose different deploy modes in RDTK:</p>
-<dl class="simple">
-<dt>toolkit</dt><dd><p>Describes a mode that can be used to generate build jobs which are
-able to bootstrap a complete software distribution from scratch by
-installing it to a shared filesystem prefix. Therefore, the Jenkins
-jobs are orchestrated by a buildflow job which triggers the distinct
-jobs per software project in the appropriate order. No polling of SCM
-is performed in this mode and jobs have to be triggered manually via
-the Jenkins interface.</p>
-</dd>
-<dt>ci-deploy</dt><dd><p>This mode is used to continuously update a software distribution
-installed in a shared prefix whenever an SCM change to a software
-component appeared. This mode does not handle the bootstrapping phase
-correctly as it starts building software projects whenever a change is
-detected or an upstream project’s build finished.</p>
-</dd>
-<dt>ci</dt><dd><p>Continuous integration mode for continuously building and testing
-software without installing it to a distinct filesystem prefix.
-Artifact copying is used between build job workspaces to handle
-dependency resolution.</p>
-</dd>
-<dt>Makefile</dt><dd><p>TODO</p>
-</dd>
-<dt>Docker</dt><dd><p>TODO</p>
-</dd>
-</dl>
+<p>toolkit</p>
+<blockquote>
+<div><p>Used to generate build jobs which bootstrap a complete software
+distribution from scratch by installing it into a filesystem
+location. The generated <a class="reference external" href="https://jenkins.io">Jenkins</a> jobs are triggered in the
+appropriate order by an additional orchestration job – no SCM
+polling is performed in this mode.</p>
+</div></blockquote>
+<p>ci-deploy</p>
+<blockquote>
+<div><p>This mode is used to automatically update a software distribution
+installed in a filesystem location after each SCM change to any of
+the involved <a class="reference internal" href="glossary.html#term-project"><span class="xref std std-term">projects</span></a>. An additional
+orchestration job performs the initial build in an order that
+respects dependencies between <a class="reference internal" href="glossary.html#term-project"><span class="xref std std-term">projects</span></a>.</p>
+</div></blockquote>
+<p>ci</p>
+<blockquote>
+<div><p>Continuous integration mode for continuously building and testing
+software without installing into a filesystem location. Artifacts
+are copied between build job workspaces to handle dependencies
+between <a class="reference internal" href="glossary.html#term-project"><span class="xref std std-term">projects</span></a>.</p>
+</div></blockquote>
+<p>Makefile</p>
+<blockquote>
+<div><p>TODO</p>
+</div></blockquote>
+<p>Docker</p>
+<blockquote>
+<div><p>TODO</p>
+</div></blockquote>
 </div>
 <div class="section" id="private-repository">
 <h2>Private Repository<a class="headerlink" href="#private-repository" title="Permalink to this headline">¶</a></h2>
