@@ -78,3 +78,28 @@ Useful features and caveats of the YAML syntax:
          ${patch}
 
          EOF
+
+  In both cases, :samp:`{FILENAME}` can take three different forms:
+
+  * :samp:`{FILENAME-NOT-STARTING-WITH-/}`
+
+    This is interpreted as a filename relative to the directory of the
+    recipe file in which the include construct occurs.
+
+  * :samp:`/{REST-OF-FILENAME-NOT-STARTING-WITH-/}`
+
+    This is interpreted as an absolute filename.
+
+  * :samp:`//{REST-OF-FILENAME}`
+
+    This  is interpreted as a filename relative to the root
+    directory of the repository containing the recipe file in which the include
+    construct occurs, that is :samp:`{REPOSITORY-ROOT/REST-OF-FILENAME}`.
+
+  So assuming a repository :file:`/home/recipes` containing a recipe
+  :file:`/home/recipes/projects/my-project.project`, the include
+  filename would be resolved as follows::
+
+    !b!include patches/patch.diff            → /home/recipes/projects/patches/patch.diff
+    !b!include /usr/share/patches/patch.diff → /usr/share/patches/patch.diff
+    !b!include //patches/patch.diff          → /home/recipes/patches/patch.diff
