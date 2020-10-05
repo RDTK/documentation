@@ -8,28 +8,25 @@ Templates describe generic properties for certain recurring aspects of
 :term:`projects <project>`. These could be build system instructions
 or common settings for redmine instances.
 
-Templates are separated into distinct modes which describe completely
-disparate usage purposes and therefore end up in differently
-configured Jenkins build jobs. This separation is achieved through
-distinct directory structures. The different directories are described
-in the following:
+Templates are organized according to :ref:`modes <deployment-modes>`
+which describe different usages and therefore result in differently
+configured Jenkins build jobs. This organization is reflected in a
+directory structure consisting of the following sub-directories:
 
 :file:`_common`
 
-  Contains templates that are shared by all distinct modes. This
-  directory cannot be used as a generator mode. In case a specific
-  mode uses a template from this directory, it is symlinked into that
-  mode's directory.
+  Templates that can be used in multiple modes. This directory does
+  not correspond to a mode itself. In case a specific mode uses a
+  template from this directory, it is symlinked into that mode's
+  directory.
 
 :file:`toolkit`
 
-  Describes a mode that can be used to generate build jobs which are
-  able to bootstrap a complete software distribution from scratch by
-  installing it to a shared filesystem prefix.  Therefore, the Jenkins
-  jobs are orchestrated by a buildflow job which triggers the distinct
-  jobs per software project in the appropriate order. No polling of
-  SCM is performed in this mode and jobs have to be triggered manually
-  via the Jenkins interface.
+  Used to generate build jobs which bootstrap a complete software
+  distribution from scratch by installing it into a filesystem
+  location. The generated Jenkins_ jobs are triggered in the
+  appropriate order by an additional orchestration job -- no SCM
+  polling is performed in this mode.
 
 :file:`ci-deploy`
 
@@ -46,10 +43,10 @@ in the following:
   Artifact copying is used between build job workspaces to handle
   dependency resolution.
 
-Template Syntax
----------------
+Recipe Syntax
+-------------
 
-A typical template description looks as follows
+A typical template recipe looks as follows:
 
 .. code-block:: yaml
 
@@ -95,6 +92,9 @@ A typical template description looks as follows
              - "@{next-value|[]}"
            cmake.targets:
              - install
+
+Important Fields
+----------------
 
 The following fields are most important:
 
