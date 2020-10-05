@@ -92,11 +92,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/build-generator.html">build-generator</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../reference.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../recipes.html">Recipes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="yaml.html">YAML Based Syntax</a></li>
 <li class="toctree-l3"><a class="reference internal" href="project.html">Project Recipes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="distribution.html">Distribution Recipes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="person.html">Person Recipes</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Templates</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#template-syntax">Template Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recipe-syntax">Recipe Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#important-fields">Important Fields</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../recipes.html#variables-and-the-substitution-sub-language">Variables and the Substitution Sub-Language</a></li>
@@ -184,27 +186,24 @@
 <p>Templates describe generic properties for certain recurring aspects of
 <a class="reference internal" href="../../glossary.html#term-project"><span class="xref std std-term">projects</span></a>. These could be build system instructions
 or common settings for redmine instances.</p>
-<p>Templates are separated into distinct modes which describe completely
-disparate usage purposes and therefore end up in differently
-configured Jenkins build jobs. This separation is achieved through
-distinct directory structures. The different directories are described
-in the following:</p>
+<p>Templates are organized according to <a class="reference internal" href="../../advanced.html#deployment-modes"><span class="std std-ref">modes</span></a>
+which describe different usages and therefore result in differently
+configured Jenkins build jobs. This organization is reflected in a
+directory structure consisting of the following sub-directories:</p>
 <p><code class="file docutils literal notranslate"><span class="pre">_common</span></code></p>
 <blockquote>
-<div><p>Contains templates that are shared by all distinct modes. This
-directory cannot be used as a generator mode. In case a specific
-mode uses a template from this directory, it is symlinked into that
-mode’s directory.</p>
+<div><p>Templates that can be used in multiple modes. This directory does
+not correspond to a mode itself. In case a specific mode uses a
+template from this directory, it is symlinked into that mode’s
+directory.</p>
 </div></blockquote>
 <p><code class="file docutils literal notranslate"><span class="pre">toolkit</span></code></p>
 <blockquote>
-<div><p>Describes a mode that can be used to generate build jobs which are
-able to bootstrap a complete software distribution from scratch by
-installing it to a shared filesystem prefix.  Therefore, the Jenkins
-jobs are orchestrated by a buildflow job which triggers the distinct
-jobs per software project in the appropriate order. No polling of
-SCM is performed in this mode and jobs have to be triggered manually
-via the Jenkins interface.</p>
+<div><p>Used to generate build jobs which bootstrap a complete software
+distribution from scratch by installing it into a filesystem
+location. The generated <a class="reference external" href="https://jenkins.io">Jenkins</a> jobs are triggered in the
+appropriate order by an additional orchestration job – no SCM
+polling is performed in this mode.</p>
 </div></blockquote>
 <p><code class="file docutils literal notranslate"><span class="pre">ci-deploy</span></code></p>
 <blockquote>
@@ -221,9 +220,9 @@ software without installing it to a distinct filesystem prefix.
 Artifact copying is used between build job workspaces to handle
 dependency resolution.</p>
 </div></blockquote>
-<div class="section" id="template-syntax">
-<h2>Template Syntax<a class="headerlink" href="#template-syntax" title="Permalink to this headline">¶</a></h2>
-<p>A typical template description looks as follows</p>
+<div class="section" id="recipe-syntax">
+<h2>Recipe Syntax<a class="headerlink" href="#recipe-syntax" title="Permalink to this headline">¶</a></h2>
+<p>A typical template recipe looks as follows:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">inherit</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">foo-template</span>
 
@@ -268,6 +267,9 @@ dependency resolution.</p>
           <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">install</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="important-fields">
+<h2>Important Fields<a class="headerlink" href="#important-fields" title="Permalink to this headline">¶</a></h2>
 <p>The following fields are most important:</p>
 <p><code class="samp docutils literal notranslate"><em><span class="pre">FILENAME</span></em></code></p>
 <blockquote>

@@ -12,10 +12,14 @@
 .. toctree::
    :hidden:
 
+   recipes/yaml
    recipes/project
    recipes/distribution
    recipes/person
    recipes/template
+
+On the syntactic level, all descriptions are currently based on
+`YAML`_. See :ref:`recipes-yaml`.
 
 Kinds of recipes:
 
@@ -39,9 +43,6 @@ Kinds of recipes:
   Descriptions of common :term:`project` kinds including how to build
   and install the respective kinds of :term:`projects <project>`
   depending on the overall development mode.
-
-On the syntactic level, all descriptions are currently based on
-`YAML`_.
 
 Variables and the Substitution Sub-Language
 ===========================================
