@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>YAML Based Syntax &mdash; RDTK  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/dummy-1.jpg"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Project Recipes" href="project.html" />
+    <link rel="prev" title="Recipes" href="../recipes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> RDTK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../vision_concept.html">Vision and Concept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced.html">Advanced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/build-generator.html">build-generator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../reference.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../recipes.html">Recipes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">YAML Based Syntax</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#writing-shell-fragments">Writing Shell Fragments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#versions-and-floating-point-literals">Versions and Floating Point Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#include-constructs">Include Constructs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project.html">Project Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distribution.html">Distribution Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="person.html">Person Recipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="template.html">Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../recipes.html#variables-and-the-substitution-sub-language">Variables and the Substitution Sub-Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../recipes.html#access-and-credentials">Access and Credentials</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RDTK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../reference.html">Reference</a> &raquo;</li>
+        
+          <li><a href="../recipes.html">Recipes</a> &raquo;</li>
+        
+      <li>YAML Based Syntax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/reference/recipes/yaml.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+  
+  <div class="section" id="yaml-based-syntax">
+<span id="recipes-yaml"></span><h1>YAML Based Syntax<a class="headerlink" href="#yaml-based-syntax" title="Permalink to this headline">¶</a></h1>
+<p>On the syntactic level, all recipes are currently based on
+<a class="reference external" href="https://yaml.org/">YAML</a>. Since YAML is a superset of <a class="reference external" href="https://json.org/">JSON</a>, descriptions can also be
+written using JSON syntax.</p>
+<p>Useful features and caveats of the YAML syntax:</p>
+<div class="section" id="writing-shell-fragments">
+<h2>Writing Shell Fragments<a class="headerlink" href="#writing-shell-fragments" title="Permalink to this headline">¶</a></h2>
+<p>For shell scripts and fragments of shell code, literal style scalar
+nodes can be useful:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+  <span class="no">if [ -r &quot;\${file}&quot; ] ; then</span>
+    <span class="no">frob &quot;\${file}&quot; &#39;foo bar&#39; \</span>
+    <span class="no">&amp;&amp; fez</span>
+  <span class="no">fi</span>
+</pre></div>
+</div>
+<p>Note how double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>), single quotes (<code class="docutils literal notranslate"><span class="pre">'</span></code>) and backslashes
+(<code class="docutils literal notranslate"><span class="pre">\</span></code>) can be used freely without escaping while <code class="docutils literal notranslate"><span class="pre">\${…}</span></code> is needed
+to prevent the <strong class="program">build-generator</strong> from applying its variable
+substitution. The <code class="docutils literal notranslate"><span class="pre">|</span></code> on the previous line indicates that the value
+should be taken literally which means whitespace and newlines are kept
+without modification. Any common whitespace (that is preceding all
+lines of the value) is stripped. Thus, the above example would be
+processed as a string consisting of the following four lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">r</span> <span class="s2">&quot;\$</span><span class="si">{file}</span><span class="s2">&quot;</span> <span class="p">]</span> <span class="p">;</span> <span class="n">then</span>
+  <span class="n">frob</span> <span class="s2">&quot;\$</span><span class="si">{file}</span><span class="s2">&quot;</span> <span class="s1">&#39;foo bar&#39;</span> \
+  <span class="o">&amp;&amp;</span> <span class="n">fez</span>
+<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="versions-and-floating-point-literals">
+<h2>Versions and Floating Point Literals<a class="headerlink" href="#versions-and-floating-point-literals" title="Permalink to this headline">¶</a></h2>
+<p>Due to the fact that YAML does not generally require delimiters around
+strings, a little bit of care has to be taken when specifying
+versions. The potential problem is that something like <code class="docutils literal notranslate"><span class="pre">master</span></code> is
+parsed as a string while something like <code class="docutils literal notranslate"><span class="pre">1.0</span></code> is parsed as a
+floating point number by default. For this reason, certain version
+numbers have to be specified as <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>- or <code class="docutils literal notranslate"><span class="pre">'</span></code>-delimited strings:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">no-problem</span><span class="p">:</span>       <span class="l l-Scalar l-Scalar-Plain">master</span>
+<span class="nt">still-no-problem</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+<span class="nt">bad</span><span class="p">:</span>              <span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="nt">good</span><span class="p">:</span>             <span class="s">&#39;1.0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="include-constructs">
+<h2>Include Constructs<a class="headerlink" href="#include-constructs" title="Permalink to this headline">¶</a></h2>
+<p>As an extension to core YAML syntax, recipes can include other YAML
+documents as well as text files:</p>
+<ul>
+<li><p>A tagged scalar node of the form <code class="samp docutils literal notranslate"><span class="pre">!b!include</span> <em><span class="pre">FILENAME</span></em></code>
+causes <code class="samp docutils literal notranslate"><em><span class="pre">FILENAME</span></em></code> to be loaded as a YAML file and spliced
+into the current recipe, replacing the tagged scalar node. Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">packages</span><span class="p">:</span>
+  <span class="kt">!b!include</span> <span class="l l-Scalar l-Scalar-Plain">package-list.yaml</span>
+</pre></div>
+</div>
+</li>
+<li><p>A tagged scalar node of the form <code class="samp docutils literal notranslate"><span class="pre">!b!literal-include</span>
+<em><span class="pre">FILENAME</span></em></code> causes <code class="samp docutils literal notranslate"><em><span class="pre">FILENAME</span></em></code> to be read as a string and
+spliced into the current recipe, replacing the tagged scalar
+node. Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">patch</span><span class="p">:</span> <span class="kt">!b!literal-include</span> <span class="l l-Scalar l-Scalar-Plain">patches/foo.diff</span>
+
+<span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+
+  <span class="no">cat &lt;&lt;&#39;EOF&#39; | patch -l p1</span>
+
+  <span class="no">${patch}</span>
+
+  <span class="no">EOF</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>In both cases, <code class="samp docutils literal notranslate"><em><span class="pre">FILENAME</span></em></code> can take three different forms:</p>
+<ul>
+<li><p><code class="samp docutils literal notranslate"><em><span class="pre">FILENAME-NOT-STARTING-WITH-/</span></em></code></p>
+<p>This is interpreted as a filename relative to the directory of the
+recipe file in which the include construct occurs.</p>
+</li>
+<li><p><code class="samp docutils literal notranslate"><span class="pre">/</span><em><span class="pre">REST-OF-FILENAME-NOT-STARTING-WITH-/</span></em></code></p>
+<p>This is interpreted as an absolute filename.</p>
+</li>
+<li><p><code class="samp docutils literal notranslate"><span class="pre">//</span><em><span class="pre">REST-OF-FILENAME</span></em></code></p>
+<p>This is interpreted as a filename relative to the root directory of
+the repository containing the recipe file in which the include
+construct occurs, that is
+<code class="samp docutils literal notranslate"><em><span class="pre">REPOSITORY-ROOT/REST-OF-FILENAME</span></em></code>.</p>
+</li>
+</ul>
+<p>So assuming a repository <code class="file docutils literal notranslate"><span class="pre">/home/recipes</span></code> containing a recipe
+<code class="file docutils literal notranslate"><span class="pre">/home/recipes/projects/my-project.project</span></code>, the include
+filename would be resolved as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!b!include patches/patch.diff            → /home/recipes/projects/patches/patch.diff
+!b!include /usr/share/patches/patch.diff → /usr/share/patches/patch.diff
+!b!include //patches/patch.diff          → /home/recipes/patches/patch.diff
+</pre></div>
+</div>
+</div>
+</div>
+
+
+
+  
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div role="contentinfo">
+        <span class="creativecommons">
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License"
+                     style="border-width:0; height:15px; width:80px;" 
+                     src="https://i.creativecommons.org/l/by/4.0/80x15.png"/></a>
+            <span xmlns:dct="http://purl.org/dc/terms/"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title"
+                  rel="dct:type">
+                The RDTK documentation
+            </span>
+            is licensed under a
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a>.
+        </span>
+        <span class="lastupdated">
+            Last updated on None.
+        </span>
+    </div>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
