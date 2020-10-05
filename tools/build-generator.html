@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
   
@@ -19,7 +23,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,11 +37,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Analyze" href="build-generator-analyze.html" />
@@ -53,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RDTK
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RDTK
           
 
           
@@ -76,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -116,6 +118,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -154,7 +157,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>build-generator</li>
     
@@ -204,7 +207,7 @@
 </div>
 <div class="section" id="global-options">
 <h2>Global Options<a class="headerlink" href="#global-options" title="Permalink to this headline">¶</a></h2>
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-trace-variable">
 <code class="sig-name descname">--trace-variable</code><code class="sig-prename descclassname">=VARIABLE-NAME</code><a class="headerlink" href="#cmdoption-build-generator-trace-variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">STRING</span> <span class="pre">INHERIT?</span> <span class="pre">T)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -212,7 +215,7 @@
 <p>This option can be supplied multiple times.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-cache-age-limit">
 <code class="sig-name descname">--cache-age-limit</code><code class="sig-prename descclassname">=AGE-IN-SECONDS</code><a class="headerlink" href="#cmdoption-build-generator-cache-age-limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">NON-NEGATIVE-INTEGER)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">1800</span></code></p>
@@ -221,35 +224,35 @@
 computed information.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-cache-directory">
 <code class="sig-name descname">--cache-directory</code><code class="sig-prename descclassname">=DIRECTORY</code><a class="headerlink" href="#cmdoption-build-generator-cache-directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">DIRECTORY-PATHNAME</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Directory into which cached data like repository mirrors should be written.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-temp-directory">
 <code class="sig-name descname">--temp-directory</code><code class="sig-prename descclassname">=DIRECTORY</code><a class="headerlink" href="#cmdoption-build-generator-temp-directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">DIRECTORY-PATHNAME</span></code> Default: <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code></p>
 <p>Directory into which temporary files should be written.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-progress-style">
 <code class="sig-name descname">--progress-style</code><code class="sig-prename descclassname">=STYLE</code><a class="headerlink" href="#cmdoption-build-generator-progress-style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(MEMBER</span> <span class="pre">NONE</span> <span class="pre">CMAKE</span> <span class="pre">ONE-LINE)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">CMAKE</span></code></p>
 <p>Progress display style.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-j">
 <code class="sig-name descname">-j</code><code class="sig-prename descclassname">=NUMBER-OF-PROCESSES</code><a class="headerlink" href="#cmdoption-build-generator-j" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">POSITIVE-INTEGER</span></code> Default: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
 <p>Number of threads (and processes) to execute in parallel.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-on-error">
 <code class="sig-name descname">--on-error</code><code class="sig-prename descclassname">=POLICY</code><a class="headerlink" href="#cmdoption-build-generator-on-error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">ERROR-POLICY</span></code> Default: <code class="docutils literal notranslate"><span class="pre">((CAUSED-BY-UNFULFILLED-PROJECT-DEPENDENCY-ERROR</span> <span class="pre">.</span> <span class="pre">CONTINUE)</span> <span class="pre">(T</span> <span class="pre">.</span> <span class="pre">FAIL))</span></code></p>
@@ -263,14 +266,14 @@ computed information.</p>
 </div>
 <p>To choose specific actions for particular errors, rules can be written
 according to the following grammar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="o">-</span><span class="n">policy</span> <span class="p">::</span><span class="o">=</span> <span class="n">rule</span><span class="o">*</span> <span class="n">default</span>
-<span class="n">rule</span> <span class="p">::</span><span class="o">=</span> <span class="n">error</span> <span class="s2">&quot;=&gt;&quot;</span> <span class="n">action</span> <span class="s2">&quot;:&quot;</span>
-<span class="n">error</span> <span class="p">::</span><span class="o">=</span> <span class="s2">&quot;object-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;simple-object-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;syntax-error&quot;</span> <span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="o">-</span><span class="n">policy</span> <span class="p">:</span><span class="o">:=</span> <span class="n">rule</span><span class="o">*</span> <span class="n">default</span>
+<span class="n">rule</span> <span class="p">:</span><span class="o">:=</span> <span class="n">error</span> <span class="s2">&quot;=&gt;&quot;</span> <span class="n">action</span> <span class="s2">&quot;:&quot;</span>
+<span class="n">error</span> <span class="p">:</span><span class="o">:=</span> <span class="s2">&quot;object-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;simple-object-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;syntax-error&quot;</span> <span class="o">|</span>
           <span class="s2">&quot;repository-access-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;repository-analysis-error&quot;</span> <span class="o">|</span>
           <span class="s2">&quot;project-analysis-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;analysis-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;dependency-error&quot;</span> <span class="o">|</span>
           <span class="s2">&quot;instantiation-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;deployment-error&quot;</span> <span class="o">|</span> <span class="s2">&quot;report-error&quot;</span>
-<span class="n">default</span> <span class="p">::</span><span class="o">=</span> <span class="n">action</span>
-<span class="n">action</span> <span class="p">::</span><span class="o">=</span> <span class="s2">&quot;abort&quot;</span> <span class="o">|</span> <span class="s2">&quot;fail&quot;</span> <span class="o">|</span> <span class="s2">&quot;continue&quot;</span> <span class="o">|</span> <span class="s2">&quot;debug&quot;</span>
+<span class="n">default</span> <span class="p">:</span><span class="o">:=</span> <span class="n">action</span>
+<span class="n">action</span> <span class="p">:</span><span class="o">:=</span> <span class="s2">&quot;abort&quot;</span> <span class="o">|</span> <span class="s2">&quot;fail&quot;</span> <span class="o">|</span> <span class="s2">&quot;continue&quot;</span> <span class="o">|</span> <span class="s2">&quot;debug&quot;</span>
 </pre></div>
 </div>
 <p>Example:</p>
@@ -283,21 +286,21 @@ analysis-errors and immediately aborts with non-zero exit code for all other
 errors.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-debug">
 <code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-build-generator-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Enable debug mode.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-h">
 <code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-build-generator-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Print this help and exit.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-build-generator-version">
 <code class="sig-name descname">--version</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-build-generator-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -347,7 +350,6 @@ errors.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

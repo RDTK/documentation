@@ -48,7 +48,7 @@ Variables and the Substitution Sub-Language
 
 Objects such as :term:`projects <project>`, :term:`distributions
 <distribution>` are basically named entities with a dictionary of
-variable names and their values. In `JSON`_, this translates into
+variable names and their values. In YAML, this translates into
 
 .. parsed-literal::
 

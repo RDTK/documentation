@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
   
@@ -19,7 +23,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,11 +37,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Help" href="build-generator-help.html" />
@@ -53,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RDTK
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RDTK
           
 
           
@@ -76,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -120,6 +122,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -158,7 +161,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="build-generator.html">build-generator</a> &raquo;</li>
         
@@ -192,35 +195,35 @@
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Generate Jenkins jobs for a given distribution.</p>
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-api-token">
 <code class="sig-name descname">--api-token</code><code class="sig-prename descclassname">=API-TOKEN</code><a class="headerlink" href="#cmdoption-generate-api-token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>API token for Jenkins authentication.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-password">
 <code class="sig-name descname">--password</code><code class="sig-prename descclassname">=PASSWORD</code><a class="headerlink" href="#cmdoption-generate-password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Password for Jenkins authentication.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-username">
 <code class="sig-name descname">--username</code><code class="sig-prename descclassname">=LOGIN</code><a class="headerlink" href="#cmdoption-generate-username" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Username for Jenkins authentication.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-base-uri">
 <code class="sig-name descname">--base-uri</code><code class="sig-prename descclassname">=URI</code><a class="headerlink" href="#cmdoption-generate-base-uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">URI</span></code> Default: <code class="docutils literal notranslate"><span class="pre">https://localhost:8080/</span></code></p>
 <p>Jenkins base <code class="docutils literal notranslate"><span class="pre">URI</span></code> .</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-delete-other-pattern">
 <code class="sig-name descname">--delete-other-pattern</code><code class="sig-prename descclassname">=REGEX</code><a class="headerlink" href="#cmdoption-generate-delete-other-pattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(OR</span> <span class="pre">NULL</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -231,7 +234,7 @@ belonging to previous versions of the distribution(s) being generated, i.e.
 the regular expression <code class="docutils literal notranslate"><span class="pre">(DISTRIBUTION-NAME₁|DISTRIBUTION-NAME₂|…)$</span></code> .</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-delete-other">
 <code class="sig-name descname">--delete-other</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-generate-delete-other" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">BOOLEAN</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -239,7 +242,7 @@ the regular expression <code class="docutils literal notranslate"><span class="p
 in this generation run.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-set">
 <code class="sig-name descname">--set</code><code class="sig-prename descclassname">=VARIABLE-NAME=VALUE</code><a class="headerlink" href="#cmdoption-generate-set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">VARIABLE-ASSIGNMENT)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -248,7 +251,7 @@ in this generation run.</p>
 <p>This option can be supplied multiple times.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-generate-mode">
 <code class="sig-name descname">--mode</code><code class="sig-prename descclassname">=MODE</code><a class="headerlink" href="#cmdoption-generate-mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">STRING</span></code> Default: <code class="docutils literal notranslate"><span class="pre">toolkit</span></code></p>
@@ -256,9 +259,9 @@ in this generation run.</p>
 <p>Selects the set of templates stored in the templates/MODE directory.</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-generate-arg-distribution-name">
-<code class="sig-name descname">DISTRIBUTION-NAME*</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-generate-arg-distribution-name" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-generate-arg-DISTRIBUTION-NAME">
+<span id="cmdoption-generate-arg-distribution-name"></span><code class="sig-name descname">DISTRIBUTION-NAME*</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-generate-arg-DISTRIBUTION-NAME" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Distribution recipes(s) which should be processed.</p>
 <p>This option can be supplied multiple times.</p>
@@ -307,7 +310,6 @@ in this generation run.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

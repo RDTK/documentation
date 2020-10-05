@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/dummy-1.jpg"/>
   
@@ -19,7 +23,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -31,11 +37,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Validate" href="build-generator-validate.html" />
@@ -53,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> RDTK
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> RDTK
           
 
           
@@ -76,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -120,6 +122,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -158,7 +161,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="build-generator.html">build-generator</a> &raquo;</li>
         
@@ -196,14 +199,14 @@
 more report files. The written information includes most of the content of the
 respective underlying recipe but also expanded variable values, inferred
 variable values and analysis results.</p>
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-report-o">
 <code class="sig-name descname">-o</code><code class="sig-prename descclassname">=DIRECTORY</code><a class="headerlink" href="#cmdoption-report-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">DIRECTORY-PATHNAME</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Directory into which output should be written.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-report-k">
 <code class="sig-name descname">-k</code><code class="sig-prename descclassname">=KIND</code><a class="headerlink" href="#cmdoption-report-k" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">(MEMBER</span> <span class="pre">JSON</span> <span class="pre">GRAPH</span> <span class="pre">CATALOG))</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
@@ -211,16 +214,16 @@ variable values and analysis results.</p>
 <p>This option can be supplied multiple times.</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-report-d">
-<code class="sig-name descname">-D</code><code class="sig-prename descclassname">=VARIABLE-NAME=VALUE</code><a class="headerlink" href="#cmdoption-report-d" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-report-D">
+<span id="cmdoption-report-d"></span><code class="sig-name descname">-D</code><code class="sig-prename descclassname">=VARIABLE-NAME=VALUE</code><a class="headerlink" href="#cmdoption-report-D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">VARIABLE-ASSIGNMENT)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Overwrite a variable after loading the distribution.</p>
 <p>Arguments to this option have to be of the form <code class="docutils literal notranslate"><span class="pre">VARIABLE-NAME=VALUE</span></code> .</p>
 <p>This option can be supplied multiple times.</p>
 </dd></dl>
 
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-report-m">
 <code class="sig-name descname">-m</code><code class="sig-prename descclassname">=MODE</code><a class="headerlink" href="#cmdoption-report-m" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">STRING</span></code> Default: <code class="docutils literal notranslate"><span class="pre">toolkit</span></code></p>
@@ -228,9 +231,9 @@ variable values and analysis results.</p>
 <p>Selects the set of templates stored in the templates/MODE directory.</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-report-arg-distribution-name">
-<code class="sig-name descname">DISTRIBUTION-NAME*</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-report-arg-distribution-name" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-report-arg-DISTRIBUTION-NAME">
+<span id="cmdoption-report-arg-distribution-name"></span><code class="sig-name descname">DISTRIBUTION-NAME*</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-report-arg-DISTRIBUTION-NAME" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type: <code class="docutils literal notranslate"><span class="pre">(LIST</span> <span class="pre">STRING)</span></code> Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 <p>Distribution recipes(s) which should be processed.</p>
 <p>This option can be supplied multiple times.</p>
@@ -279,7 +282,6 @@ variable values and analysis results.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
