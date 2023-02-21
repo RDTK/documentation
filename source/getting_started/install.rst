@@ -63,7 +63,7 @@ following code block in a terminal.
 .. code-block:: bash
 
    cd $RDTK_ROOT
-   git clone https://opensource.cit-ec.de/git/citk
+   git clone https://gitlab.ub.uni-bielefeld.de/rdtk/citk.git
 
 
 Generate Distribution Jobs and Dependency Installation
@@ -87,7 +87,7 @@ in:
    ls
 
 As an example we will generate all build jobs for the ``build-generator-nightly.distribution``
-`(source) <https://opensource.cit-ec.de/projects/citk/repository/revisions/master/entry/distributions/build-generator-experiments.distribution>`_ and the required platform dependencies.
+`(source) <https://gitlab.ub.uni-bielefeld.de/rdtk/citk/-/blob/master/distributions/build-generator-nightly.distribution>`_ and the required platform dependencies.
 
 .. code-block:: bash
 
